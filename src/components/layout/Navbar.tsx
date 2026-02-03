@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
                         </div>
                     </label>
                     <div className="flex gap-2">
-                        <Link to="/cart?view=wishlist" className="flex items-center justify-center rounded-lg h-10 w-10 bg-[#f0eeea] dark:bg-[#2d2a25] text-charcoal dark:text-white hover:bg-primary/20 transition-colors relative">
+                        <Link to="/cart?view=wishlist" className="hidden md:flex items-center justify-center rounded-lg h-10 w-10 bg-[#f0eeea] dark:bg-[#2d2a25] text-charcoal dark:text-white hover:bg-primary/20 transition-colors relative">
                             <Heart className={`size-5 ${wishlistCount > 0 ? 'fill-primary text-primary' : ''}`} />
                             {wishlistCount > 0 && (
                                 <span className="absolute -top-1 -right-1 bg-primary text-[#1d1a15] text-[10px] font-bold h-4 w-4 flex items-center justify-center rounded-full shadow-md animate-in fade-in zoom-in duration-300">
@@ -59,7 +59,7 @@ const Navbar: React.FC = () => {
                                 </span>
                             )}
                         </Link>
-                        <Link to="/login" className="flex items-center justify-center rounded-lg h-10 w-10 bg-[#f0eeea] dark:bg-[#2d2a25] text-charcoal dark:text-white hover:bg-primary/20 transition-colors">
+                        <Link to="/login" className="hidden md:flex items-center justify-center rounded-lg h-10 w-10 bg-[#f0eeea] dark:bg-[#2d2a25] text-charcoal dark:text-white hover:bg-primary/20 transition-colors">
                             <User className="size-5" />
                         </Link>
                         <button
@@ -80,7 +80,15 @@ const Navbar: React.FC = () => {
                         <Link onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold p-2 text-charcoal dark:text-white hover:text-primary transition-colors border-b border-dashed border-primary/10" to="/projects">Projects</Link>
                         <Link onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold p-2 text-charcoal dark:text-white hover:text-primary transition-colors border-b border-dashed border-primary/10" to="/services">Interior Design</Link>
                         <Link onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold p-2 text-charcoal dark:text-white hover:text-primary transition-colors border-b border-dashed border-primary/10" to="/about">About Us</Link>
-                        <Link onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold p-2 text-charcoal dark:text-white hover:text-primary transition-colors" to="/contact">Contact</Link>
+                        <Link onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold p-2 text-charcoal dark:text-white hover:text-primary transition-colors border-b border-dashed border-primary/10" to="/contact">Contact</Link>
+
+                        <div className="border-t border-primary/10 my-2"></div>
+
+                        <Link onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold p-2 text-charcoal dark:text-white hover:text-primary transition-colors flex items-center justify-between border-b border-dashed border-primary/10" to="/cart?view=wishlist">
+                            <span>Wishlist</span>
+                            {wishlistCount > 0 && <span className="bg-primary text-[#1d1a15] text-xs font-bold px-2 py-0.5 rounded-full">{wishlistCount}</span>}
+                        </Link>
+                        <Link onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold p-2 text-charcoal dark:text-white hover:text-primary transition-colors" to="/login">Profile</Link>
                     </nav>
                 </div>
             )}

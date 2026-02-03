@@ -52,8 +52,12 @@
 }
 
 @layer base {
+  :root {
+    color-scheme: light;
+  }
+
   body {
-    @apply bg-background-light dark:bg-background-dark text-charcoal dark:text-white transition-colors duration-300;
+    @apply bg-background-light text-charcoal transition-colors duration-300;
   }
 }
 

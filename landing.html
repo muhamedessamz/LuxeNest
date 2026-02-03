@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>LuxeNest Home Page</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c6a471",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#1d1a15",
+                        "charcoal": "#1f1f1f"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-charcoal dark:text-white transition-colors duration-300">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <header
+            class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 bg-background-light dark:bg-background-dark px-10 py-4 sticky top-0 z-50">
+            <div class="flex items-center gap-8">
+                <div class="flex items-center gap-3 text-charcoal dark:text-white">
+                    <div class="size-6 text-primary">
+                        <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h2 class="text-xl font-bold leading-tight tracking-tight">LuxeNest</h2>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Shop</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Collections</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Design Services</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Journal</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="hidden lg:flex items-center bg-primary/10 rounded-full px-4 py-1.5">
+                    <span class="material-symbols-outlined text-primary text-xl">search</span>
+                    <input
+                        class="bg-transparent border-none focus:ring-0 text-sm w-40 placeholder:text-charcoal/50 dark:placeholder:text-white/50"
+                        placeholder="Search interiors..." type="text" />
+                </div>
+                <button class="p-2 hover:bg-primary/10 rounded-full transition-colors">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                </button>
+                <button class="p-2 hover:bg-primary/10 rounded-full transition-colors">
+                    <span class="material-symbols-outlined">person</span>
+                </button>
+            </div>
+        </header>
+        <main>
+            <section class="w-full">
+                <div class="relative min-h-[600px] flex items-center justify-center bg-cover bg-center"
+                    data-alt="Luxury modern living room with neutral tones"
+                    style='background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAX8YdEkfRe953QmnR9mz6rGWywh3LgD5Kp3rJ4LgkKvfhMc3ojBLdWagagSIPAhvRdWgz03tTvsg-s3zXoDE2jWvvO7xvLGZXHyQTEoPGxU5HmJGIhKcGhPT2ZSieBZWqm166pIc4LK7hNIBnsLwbF6neoMFme4fKk0YpF7gC207Ipa4vJcpcd9B4-aJ7PY8tLF0_fxiOVxkUeE8SMpKQoy-CgBI1RnSxYvfFnoDmotLzSfB5Hb4hdcqjO7ALDNEtgiERESI7xS2Q4");'>
+                    <div class="text-center max-w-3xl px-6">
+                        <h1 class="text-white text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-[1.1]">
+                            Crafting Timeless Comfort &amp; Elegance
+                        </h1>
+                        <p class="text-white/90 text-lg md:text-xl mb-10 font-light max-w-xl mx-auto">
+                            Experience the pinnacle of luxury living with our curated collections of handcrafted
+                            furniture.
+                        </p>
+                        <button
+                            class="bg-primary text-charcoal font-bold py-4 px-10 rounded-lg text-lg hover:bg-primary/90 transition-all shadow-xl">
+                            Shop Now
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="max-w-[1200px] mx-auto py-20 px-6">
+                <div class="flex justify-between items-end mb-10">
+                    <div>
+                        <span class="text-primary font-bold tracking-widest text-xs uppercase">Curated</span>
+                        <h2 class="text-3xl font-bold mt-2">Featured Categories</h2>
+                    </div>
+                    <a class="text-primary font-bold text-sm border-b-2 border-primary pb-1" href="#">Browse All</a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="group relative overflow-hidden rounded-xl aspect-[4/5] cursor-pointer">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                            data-alt="Modern sofa in minimalist living room"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDdgb53VczFkXg_VUkNLHD-AznVSOGwRoVxaXbLESCKHtJg4cknD6GrM3pv_22ndL508bMDUzcouflSw4-jrn-DsxzzcxkyrHOCI_lpncWuJthcpBc8zmIkzhDKzu9WL-c1pR8K5lHubBVEkcLGNgRkJeyWEBzWxC5T6x-Pv3QIL8kqeujysoldoY8cvGV0AGLBymuAuMqHYUvE4VmQ9vOVWxS6oMNsnnEE-dE4XVAOJimjKIAnRjTVeN7TWjPDavN9v6a6UtoVbt5a");'>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+                        <div class="absolute bottom-8 left-8">
+                            <h3 class="text-white text-2xl font-bold">Living Room</h3>
+                            <p class="text-white/70 text-sm mt-1">420+ Items</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl aspect-[4/5] cursor-pointer">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                            data-alt="Luxury velvet bed frame and linens"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAetdIdjcbyKzS6tLLcFaz2qk4lgSA1KJ3WlurYvssK-J5cx3H--Zu7EgUz82oN4M99YjHiIXvnWUFEoa8WQ0jyqz_Xwmh43NhlatzL31RSmfeX-cfaTuJ4Lydvcu4d3I0kEGXW0xRQ9XK5fJU3MaaEf8FQy59Z8wCtu1t6qwJunaPf7oCntHSjKHfraM1SSgVY9YRDkYNe7HsYEbBXVj-YWXTK3Ml86D4XG1GckQ875XyxDEWvzYGoXdSH5---IpQwaUBO3j3_a2bZ");'>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+                        <div class="absolute bottom-8 left-8">
+                            <h3 class="text-white text-2xl font-bold">Bedroom</h3>
+                            <p class="text-white/70 text-sm mt-1">150+ Items</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-xl aspect-[4/5] cursor-pointer">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                            data-alt="Elegant marble dining table setup"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuArNEMsIYoP_QkyTsMOVf2aW9demELCZKlls8xvgR0Wvmk2qf_D31ey0dVoE7r_9aYeajChsosJnaGjifgfj_MFVAfdMUdDnKJUC4V6dhU4Dv0f-2SL8EaFGE40zqGOWSM8IUlBnaiXOTLUQT95_O1ZMaret9iKsi6e7uMwUNd6lfgznPGrzXKyXMMUds4Cax9UHeFY-7w7uAfQ63z-FfGsBYtW1KeztUaGBTFu8ZoRdnGs0yOgvGBbRl2bIzD9oVdvHo1RF_0xMt9E");'>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+                        <div class="absolute bottom-8 left-8">
+                            <h3 class="text-white text-2xl font-bold">Dining Room</h3>
+                            <p class="text-white/70 text-sm mt-1">280+ Items</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-primary/5 py-20">
+                <div class="max-w-[1200px] mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl font-bold mb-4">Our Best Sellers</h2>
+                        <p class="text-charcoal/60 dark:text-white/60 max-w-xl mx-auto">Discover the pieces that define
+                            modern luxury. Loved by our clients and designed for a lifetime.</p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div
+                            class="bg-background-light dark:bg-background-dark p-4 rounded-xl shadow-sm hover:shadow-xl transition-shadow border border-primary/10">
+                            <div class="rounded-lg overflow-hidden aspect-square mb-4 bg-[#f0eeea]">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Curved mustard yellow designer armchair"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqOSAJPrXt4nRouPYJgaCXupCO0xB5PqU3lrCKBhhXyM_LNVohMuOfthW5C02nPKwOoBOGTo9rEJuM5XPX4AhynPf5amLf4r9-YEHzxvXPF5r4v8aFMttyrMuNjA3Z-pwpMFa4jd7SkKFrcNQ1WULIweh2GTQcE-1zs333-FT4c3oJgFqEfG6sNpXAtSOWynhCYDOMMtPlbkwj9m3OxD7Mgz6OyQPVCgUCNu_Ov4eanK1VZ_FR2j3SEpz2tbG0o7D9aOSduxrfUtGV" />
+                            </div>
+                            <h4 class="font-bold text-lg mb-1">Aurelius Lounge Chair</h4>
+                            <p class="text-primary font-bold text-sm mb-3">$1,250</p>
+                            <button
+                                class="w-full py-2 border border-primary text-primary rounded-lg font-bold text-sm hover:bg-primary hover:text-white transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                        <div
+                            class="bg-background-light dark:bg-background-dark p-4 rounded-xl shadow-sm hover:shadow-xl transition-shadow border border-primary/10">
+                            <div class="rounded-lg overflow-hidden aspect-square mb-4 bg-[#f0eeea]">
+                                <img class="w-full h-full object-cover" data-alt="Minimalist wooden coffee table"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcuRPHe0KyK6EkhkXip4Wyxh9j9N57h_Hnseo0Nn5otHTeATEGTE6v6C1V5gLGEVs9ew-WV0MsvEo5XwJGU691soAYssNMHpdhePr7mN3ly9am86g4_6NYqwpIYBBAXKt8vVjRBW1R88yKyqb-jkRUdkmvuzaPewsKC4KhWiBWnmkn6Kw6RsFFKP63ubz3z3SlBVzwCNWMuUpH_6l2xKdWT-NWxAdAjWw_YwFvlr9d-ipqGGyyBJBSrQYnLCLbdPMTT24DEvyyLB1I" />
+                            </div>
+                            <h4 class="font-bold text-lg mb-1">Nexus Walnut Table</h4>
+                            <p class="text-primary font-bold text-sm mb-3">$890</p>
+                            <button
+                                class="w-full py-2 border border-primary text-primary rounded-lg font-bold text-sm hover:bg-primary hover:text-white transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                        <div
+                            class="bg-background-light dark:bg-background-dark p-4 rounded-xl shadow-sm hover:shadow-xl transition-shadow border border-primary/10">
+                            <div class="rounded-lg overflow-hidden aspect-square mb-4 bg-[#f0eeea]">
+                                <img class="w-full h-full object-cover" data-alt="Elegant tall ceramic vase"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb5fDWTpD2JbUFgSRLMjqoZM1bG9CcDrrH25YjI_tgWbW2tEJPHqb24AwtwvohDW553Kpb9iq6l9STVBWnB7nlx2F4aTxZ9Oq7R3B3Nr2ihrkBH-6gu5c5ZxEAGDQ1LAa7JUPHxH4mRFL97O-P3Pz0LHuEbmydnwylEvxd2KUiOm931q5pvrmQbD1bX2SIbfCZ3WUewOfIBzbIPaDUU7N_XXfT3XZBBfJYUIVSsBI8o9ZoaWBDXwoLQ2_bfNhUBjKvJS_dqCM3tKSl" />
+                            </div>
+                            <h4 class="font-bold text-lg mb-1">Opaline Ceramic Set</h4>
+                            <p class="text-primary font-bold text-sm mb-3">$340</p>
+                            <button
+                                class="w-full py-2 border border-primary text-primary rounded-lg font-bold text-sm hover:bg-primary hover:text-white transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                        <div
+                            class="bg-background-light dark:bg-background-dark p-4 rounded-xl shadow-sm hover:shadow-xl transition-shadow border border-primary/10">
+                            <div class="rounded-lg overflow-hidden aspect-square mb-4 bg-[#f0eeea]">
+                                <img class="w-full h-full object-cover" data-alt="Modern pendant light fixture"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBygEp7Rv7dQnNXwoYAXdp_QPuDVq_G9F_-vMYa4B7RR7KcJWnLTPduIA-kyZQ0edt6WmgSV4hNPzRO45GvGVnQfXgPV7yPTaJ5I2JCtSIXMn9EDowculSu_kOzRZeZQZrzg3W2ZK64Pec56FlahoZSHuTeTmHOuMAJXqPad-jytWyEJx40uDt9RbecgIvwnHImb-5RJNBWpZp3r26ZV8gXDxZFv-hWO1ID4QZCZEUmXgW97lbQDiBl4ItcN3DSoOQmj11lDhOMBAJa" />
+                            </div>
+                            <h4 class="font-bold text-lg mb-1">Ethereal Pendant</h4>
+                            <p class="text-primary font-bold text-sm mb-3">$520</p>
+                            <button
+                                class="w-full py-2 border border-primary text-primary rounded-lg font-bold text-sm hover:bg-primary hover:text-white transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="max-w-[1200px] mx-auto py-24 px-6">
+                <div class="grid md:grid-cols-3 gap-12 text-center">
+                    <div>
+                        <span class="material-symbols-outlined text-primary text-4xl mb-4">verified</span>
+                        <h3 class="font-bold text-xl mb-2">Master Craftsmanship</h3>
+                        <p class="text-charcoal/60 dark:text-white/60 text-sm">Every piece is hand-finished by master
+                            artisans with decades of experience.</p>
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined text-primary text-4xl mb-4">eco</span>
+                        <h3 class="font-bold text-xl mb-2">Sustainable Sourcing</h3>
+                        <p class="text-charcoal/60 dark:text-white/60 text-sm">We use only FSC-certified woods and
+                            ethically sourced fabrics for our creations.</p>
+                    </div>
+                    <div>
+                        <span class="material-symbols-outlined text-primary text-4xl mb-4">local_shipping</span>
+                        <h3 class="font-bold text-xl mb-2">White Glove Delivery</h3>
+                        <p class="text-charcoal/60 dark:text-white/60 text-sm">Complimentary professional setup for all
+                            premium furniture orders.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-charcoal text-white py-20 px-6">
+                <div class="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-16 items-center">
+                    <div class="rounded-2xl overflow-hidden aspect-video shadow-2xl">
+                        <img class="w-full h-full object-cover" data-alt="Interior designer working with fabric samples"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrpbh-fzRwbJxruiX3-_vx5Vub0_sOS_NQteEvgMrEI74yeD165uwFz2BreRxx19Mp2iy4BRitZ1tDD7kQWA05Fe34QZ4OhWGpDiZoGlA297VmYmS_PIrTgIcsfWZoBlHn8lygOcy_Pz__yVed1uj-Nk78nZNNPuTq8yyo6uA_Gjp_yRV5RXW1-Uh2SNc7HMo1HdsoPqhSfOmb-y-aAMPGgmJ_ps0WN_G_Uuxz9K2ueaWjJM4DKnN9VUZmgXgZWPQ9rHKclcfMwkKG" />
+                    </div>
+                    <div>
+                        <h2 class="text-4xl font-bold mb-6">Interior Design Services</h2>
+                        <p class="text-white/70 mb-8 text-lg">
+                            Let our world-class designers help you transform your space into a masterpiece of comfort
+                            and style. From color palettes to custom layouts, we've got you covered.
+                        </p>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                <div>
+                                    <h4 class="font-bold">Complimentary Consultation</h4>
+                                    <p class="text-white/60 text-sm">30-minute introductory call with an expert.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                <div>
+                                    <h4 class="font-bold">3D Visualizations</h4>
+                                    <p class="text-white/60 text-sm">See your dream space before you purchase.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="mt-10 bg-primary text-charcoal font-bold py-3 px-8 rounded-lg hover:bg-primary/90 transition-all">
+                            Book a Consultation
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-background-light dark:bg-background-dark border-t border-primary/20 pt-20 pb-10">
+            <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="size-6 text-primary">
+                            <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h2 class="text-xl font-bold">LuxeNest</h2>
+                    </div>
+                    <p class="text-charcoal/60 dark:text-white/60 text-sm leading-relaxed mb-6">
+                        Transforming houses into curated homes with timeless furniture and expert design advice.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">public</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">share</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">mail</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Shop</h4>
+                    <ul class="space-y-4 text-sm text-charcoal/60 dark:text-white/60">
+                        <li><a class="hover:text-primary transition-colors" href="#">New Arrivals</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Best Sellers</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Living Room</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Dining Room</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Company</h4>
+                    <ul class="space-y-4 text-sm text-charcoal/60 dark:text-white/60">
+                        <li><a class="hover:text-primary transition-colors" href="#">Our Story</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Journal</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Newsletter</h4>
+                    <p class="text-sm text-charcoal/60 dark:text-white/60 mb-4">Join our list for exclusive releases and
+                        design tips.</p>
+                    <div class="flex">
+                        <input
+                            class="bg-primary/10 border-none rounded-l-lg py-3 px-4 w-full focus:ring-1 focus:ring-primary text-sm"
+                            placeholder="Email address" type="email" />
+                        <button class="bg-primary text-charcoal px-4 py-3 rounded-r-lg hover:bg-primary/90">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-[1200px] mx-auto px-6 border-t border-primary/10 pt-10 text-center md:text-left">
+                <p class="text-xs text-charcoal/40 dark:text-white/40">© 2024 LuxeNest Interior Group. All rights
+                    reserved. Privacy Policy | Terms of Service</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

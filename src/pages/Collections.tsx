@@ -4,6 +4,7 @@ import { ChevronDown, Check, Armchair, ChevronUp, Tag, Layers, ShoppingCart, Che
 import { useCart } from '../context/CartContext';
 import { useWishlist } from '../context/WishlistContext';
 
+// Enhanced Mock Data
 const products = [
     {
         id: 'coll-1',
@@ -42,7 +43,7 @@ const products = [
         name: 'Cloud Upholstered Bed',
         category: 'Bedroom',
         price: 2200,
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDKHqJ3-8NiMOoaePVsCXIK82G8gM02mqLnYg2Ip3ROYSZ-8gQC4cuyynb-Y7S4gVOrQsQSR5wZ-FFaeO130IhW1nHMlaj6mJfLtDDmRrRNVgOk-LOlF7Kw3x4_S9ohtzndRhtRR6ChETf69wS6ouWNs1Qq7yyw1CQEd7rQAS_aJ7LfNF_pMVOCpTB-UKsbZ42XMthrrtbX9j91tOIPPzhv4_s17dhrEAwmmDUKrOAttRlzNv4PxIcJo1Av6rUau_FuPnk1OE15gqja'
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDKHqJ3-8NiMOoaePVsCXIK82G8gM02mqLnYg2Ip3ROYSZ-8gQC4cuyynb-Y7S4gVOrQsQSR5wZ-FFaeO130IhW1nHMlaj6mJfLtDDmRrRNVgOk-LOlF7Kw3x4_S9ohtzndRhtRR6ChETf69wS6ouWNs1Qq7yyw1CQEd7rQAS_aJ7LfNF_pMVOCpTB-UKsbZ42XMthrrtbX9j91tOIPPzhv4_s17dhrEAwmmDUKrOAttRlzNv4PxIcJo1Bqefy174RgPqLCR'
     },
     {
         id: 'coll-6',
@@ -50,12 +51,113 @@ const products = [
         category: 'Lighting',
         price: 450,
         image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDn3rxY-iRno1U1x-k4WL7AgEo-x9RQ3xxAT6R006rclXUw33SrD3qzgoks6Oblmq_4ug6GEWR0sPWe4X6pNu8_SX7gCMY_YRhz15Y9t1n3PztahQlGW3o6H1__bS9UAie_hWyXcXnSZ9DN7bnem44muVrt9MgH0VtiBIP1K7xq19k0UW9y7Ws1G0umsU3vAzMPnSblqLiz0SVG2EQNumKEQ1gAdBsq_6DDv5MEDTCWVLP_v4MVUzyYrWgMhJgo1Bqefy174RgPqLCR'
+    },
+    {
+        id: 'coll-7',
+        name: 'Elysian Accent Chair',
+        category: 'Living Room',
+        price: 899,
+        image: 'https://images.unsplash.com/photo-1580480055273-228fff39a957?auto=format&fit=crop&q=80&w=1000'
+    },
+    {
+        id: 'coll-8',
+        name: 'Vanguard Coffee Table',
+        category: 'Living Room',
+        price: 1200,
+        badge: 'Trending',
+        badgeColor: 'bg-primary',
+        image: 'https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&q=80&w=1000'
+    },
+    {
+        id: 'coll-9',
+        name: 'Seraphina Chandelier',
+        category: 'Lighting',
+        price: 3500,
+        oldPrice: '$4,200',
+        badge: 'Limited',
+        badgeColor: 'bg-charcoal',
+        image: 'https://images.unsplash.com/photo-1543508282-6319a3e2621f?auto=format&fit=crop&q=80&w=1000'
+    },
+    {
+        id: 'coll-10',
+        name: 'Obsidian Console Table',
+        category: 'Entryway',
+        price: 1450,
+        image: 'https://images.unsplash.com/photo-1515263487990-61b07816b324?auto=format&fit=crop&q=80&w=1000'
+    },
+    {
+        id: 'coll-11',
+        name: 'Caspian Blue Rug',
+        category: 'Decor',
+        price: 650,
+        image: 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&q=80&w=1000'
+    },
+    {
+        id: 'coll-12',
+        name: 'Meridian Bookshelf',
+        category: 'Office',
+        price: 1100,
+        image: 'https://images.unsplash.com/photo-1595515106967-1b072c49ee61?auto=format&fit=crop&q=80&w=1000'
+    },
+    {
+        id: 'coll-13',
+        name: 'Solis Outdoor Lounge',
+        category: 'Outdoor',
+        price: 2800,
+        badge: 'New',
+        image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1000'
+    },
+    {
+        id: 'coll-14',
+        name: 'Aria Marble Dining Table',
+        category: 'Dining',
+        price: 3200,
+        image: 'https://images.unsplash.com/photo-1554295405-abb8fd54f153?auto=format&fit=crop&q=80&w=1000'
+    },
+    {
+        id: 'coll-15',
+        name: 'Zephyr Art Print',
+        category: 'Decor',
+        price: 250,
+        image: 'https://images.unsplash.com/photo-1582201970267-f58797f10134?auto=format&fit=crop&q=80&w=1000'
+    },
+    {
+        id: 'coll-16',
+        name: 'Orion Velvet Ottoman',
+        category: 'Living Room',
+        price: 450,
+        image: 'https://images.unsplash.com/photo-1503602642458-2321114458ed?auto=format&fit=crop&q=80&w=1000'
+    },
+    {
+        id: 'coll-17',
+        name: 'Terra Cotta Vase Set',
+        category: 'Decor',
+        price: 180,
+        image: 'https://images.unsplash.com/photo-1578500494198-246f612d3b3d?auto=format&fit=crop&q=80&w=1000'
+    },
+    {
+        id: 'coll-18',
+        name: 'Eclipse Wall Mirror',
+        category: 'Decor',
+        price: 550,
+        image: 'https://images.unsplash.com/photo-1618220252344-8ec99ec624b1?auto=format&fit=crop&q=80&w=1000'
     }
 ];
 
 const Collections: React.FC = () => {
     const { addToCart } = useCart();
     const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
+    const [currentPage, setCurrentPage] = React.useState(1);
+    const itemsPerPage = 6;
+
+    const totalPages = Math.ceil(products.length / itemsPerPage);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const currentProducts = products.slice(startIndex, startIndex + itemsPerPage);
+
+    const handlePageChange = (page: number) => {
+        setCurrentPage(page);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
     const handleWishlistToggle = (e: React.MouseEvent, product: any) => {
         e.preventDefault();
@@ -158,9 +260,9 @@ const Collections: React.FC = () => {
                 {/* Product Grid */}
                 <div className="flex-1">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {products.map((product, index) => (
+                        {currentProducts.map((product) => (
                             <Link
-                                key={index}
+                                key={product.id}
                                 to="/product/velvet-serenity-sofa"
                                 className="flex flex-col bg-white dark:bg-[#25211c] rounded-2xl overflow-hidden shadow-sm border border-[#e1ddd5] dark:border-[#322e28] group hover:shadow-xl transition-all duration-300"
                             >
@@ -188,7 +290,8 @@ const Collections: React.FC = () => {
                                         <h3 className="text-[#181511] dark:text-white text-xl font-black">{product.name}</h3>
                                         <div className="flex items-center gap-3 justify-center">
                                             <p className="text-primary text-2xl font-bold leading-tight">${product.price}</p>
-                                            {product.oldPrice && <p className="text-[#86775f] text-base line-through opacity-70">{product.oldPrice}</p>}
+                                            {// @ts-ignore
+                                                product.oldPrice && <p className="text-[#86775f] text-base line-through opacity-70">{product.oldPrice}</p>}
                                         </div>
                                     </div>
                                     <button
@@ -205,15 +308,32 @@ const Collections: React.FC = () => {
 
                     {/* Pagination */}
                     <div className="mt-12 flex justify-center items-center gap-2">
-                        <button className="flex items-center justify-center h-10 w-10 rounded-lg border border-[#f0eeea] dark:border-[#333] hover:bg-primary/10 text-[#86775f] transition-colors">
+                        <button
+                            onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
+                            disabled={currentPage === 1}
+                            className="flex items-center justify-center h-10 w-10 rounded-lg border border-[#f0eeea] dark:border-[#333] hover:bg-primary/10 text-[#86775f] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
                             <ChevronLeft className="size-5" />
                         </button>
-                        <button className="flex items-center justify-center h-10 w-10 rounded-lg bg-primary text-white font-bold">1</button>
-                        <button className="flex items-center justify-center h-10 w-10 rounded-lg border border-[#f0eeea] dark:border-[#333] hover:bg-primary/10 text-[#181511] dark:text-white transition-colors">2</button>
-                        <button className="flex items-center justify-center h-10 w-10 rounded-lg border border-[#f0eeea] dark:border-[#333] hover:bg-primary/10 text-[#181511] dark:text-white transition-colors">3</button>
-                        <span className="px-2 text-[#86775f]">...</span>
-                        <button className="flex items-center justify-center h-10 w-10 rounded-lg border border-[#f0eeea] dark:border-[#333] hover:bg-primary/10 text-[#181511] dark:text-white transition-colors">12</button>
-                        <button className="flex items-center justify-center h-10 w-10 rounded-lg border border-[#f0eeea] dark:border-[#333] hover:bg-primary/10 text-[#86775f] transition-colors">
+
+                        {Array.from({ length: totalPages }).map((_, idx) => (
+                            <button
+                                key={idx}
+                                onClick={() => handlePageChange(idx + 1)}
+                                className={`flex items-center justify-center h-10 w-10 rounded-lg transition-colors font-bold ${currentPage === idx + 1
+                                        ? 'bg-primary text-white'
+                                        : 'border border-[#f0eeea] dark:border-[#333] hover:bg-primary/10 text-[#181511] dark:text-white'
+                                    }`}
+                            >
+                                {idx + 1}
+                            </button>
+                        ))}
+
+                        <button
+                            onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
+                            disabled={currentPage === totalPages}
+                            className="flex items-center justify-center h-10 w-10 rounded-lg border border-[#f0eeea] dark:border-[#333] hover:bg-primary/10 text-[#86775f] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
                             <ChevronRight className="size-5" />
                         </button>
                     </div>

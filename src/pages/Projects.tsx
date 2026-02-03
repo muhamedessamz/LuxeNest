@@ -71,8 +71,8 @@ const Projects: React.FC = () => {
                             {projects.map((project, index) => (
                                 <div
                                     key={index}
-                                    className={`group relative bg-cover bg-center flex flex-col gap-3 rounded-xl justify-end p-8 overflow-hidden cursor-pointer
-                    ${project.size === 'large' ? 'lg:col-span-2 lg:row-span-2 aspect-square md:aspect-[4/5] lg:aspect-auto' : 'aspect-[4/5]'}
+                                    className={`group relative bg-cover bg-center flex flex-col gap-3 rounded-xl justify-end p-8 overflow-hidden cursor-pointer aspect-[4/5]
+                    ${project.size === 'large' ? 'lg:col-span-2 lg:row-span-2 lg:aspect-auto' : ''}
                   `}
                                     style={{
                                         backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%), url("${project.image}")`
@@ -127,11 +127,11 @@ const Projects: React.FC = () => {
                                 <p className="text-[#86775f] dark:text-[#a39682] text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
                                     Ready to transform your living space into a masterpiece? Consult with our award-winning design team.
                                 </p>
-                                <div className="flex flex-wrap justify-center gap-6">
-                                    <button className="bg-primary text-white px-10 py-5 rounded-xl font-black uppercase tracking-widest hover:brightness-110 transition-all flex items-center gap-2 shadow-xl shadow-primary/20">
+                                <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-6 w-full md:w-auto">
+                                    <button className="bg-primary text-white px-6 md:px-10 py-4 md:py-5 rounded-xl font-black uppercase tracking-widest hover:brightness-110 transition-all flex items-center justify-center gap-2 shadow-xl shadow-primary/20 w-full md:w-auto text-sm md:text-base">
                                         Book a Consultation <ArrowRight className="size-5" />
                                     </button>
-                                    <button className="border border-[#e1ddd5] dark:border-[#322e28] bg-white dark:bg-transparent text-[#86775f] px-10 py-5 rounded-xl font-black uppercase tracking-widest hover:bg-[#fbfaf9] dark:hover:bg-white/5 transition-all">
+                                    <button className="border border-[#e1ddd5] dark:border-[#322e28] bg-white dark:bg-transparent text-[#86775f] px-6 md:px-10 py-4 md:py-5 rounded-xl font-black uppercase tracking-widest hover:bg-[#fbfaf9] dark:hover:bg-white/5 transition-all w-full md:w-auto text-sm md:text-base">
                                         View Price Guide
                                     </button>
                                 </div>
