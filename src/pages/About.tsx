@@ -53,7 +53,7 @@ const timelineSteps = [
 
 const About: React.FC = () => {
     return (
-        <div className="bg-background-light dark:bg-background-dark text-charcoal dark:text-white transition-colors duration-300">
+        <div className="bg-background-light text-charcoal transition-colors duration-300">
             <main className="flex flex-col items-center">
                 <div className="w-full max-w-[1500px] flex flex-col gap-10">
 
@@ -83,16 +83,16 @@ const About: React.FC = () => {
                     {/* Purposeful Luxury Section */}
                     <section className="flex flex-col gap-16 px-4 py-16">
                         <div className="flex flex-col gap-6 text-center items-center">
-                            <h2 className="text-4xl md:text-5xl font-black leading-tight tracking-tight text-[#181511] dark:text-white">
+                            <h2 className="text-4xl md:text-5xl font-black leading-tight tracking-tight text-[#181511]">
                                 Purposeful Luxury
                             </h2>
                             <div className="h-1.5 w-24 bg-primary rounded-full"></div>
-                            <p className="text-[#86775f] dark:text-[#a89984] text-xl max-w-3xl leading-relaxed">
+                            <p className="text-[#86775f] text-xl max-w-3xl leading-relaxed">
                                 Rooted in elegance, committed to sustainable craftsmanship and timeless design.
                             </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div className="flex flex-col gap-6 p-8 rounded-xl bg-white dark:bg-[#25221d] border border-primary/20 shadow-sm">
+                            <div className="flex flex-col gap-6 p-8 rounded-xl bg-white border border-primary/20 shadow-sm">
                                 <div
                                     className="w-full aspect-video bg-cover bg-center rounded-lg"
                                     style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCEqrQU7NwuM8PmK9Gxr2fZvWlit4cSW60cs5pvUk8K3ofzz2efd6GeaiVPrkP6GsRhC1amn8q71NpFcvX2v06vgOnmtm0XA7i7fOb74bhPsGDIDe7M0cmZBOAJl2VAtU4hMixurTlfeIlTlcxU23Zr4fIYN3adwDV6JsFkBURpjlW7HDe6YsOaTQ3zYJmwDpnmDTqF3S7pVpF78E3r9iwk7pfLN1kPuodENf8nkDrl6jnk2fMTS5JbqSSpFZgDy2o1gM6PZWO0kDze")' }}
@@ -102,12 +102,12 @@ const About: React.FC = () => {
                                         <Sparkles className="size-6" />
                                         <h3 className="text-2xl font-bold">The Mission</h3>
                                     </div>
-                                    <p className="text-[#86775f] dark:text-[#a89984] leading-relaxed">
+                                    <p className="text-[#86775f] leading-relaxed">
                                         To redefine luxury through artisanal precision and sustainable materials. We believe every piece should tell a story of ethical production and unmatched quality.
                                     </p>
                                 </div>
                             </div>
-                            <div className="flex flex-col gap-6 p-8 rounded-xl bg-white dark:bg-[#25221d] border border-primary/20 shadow-sm">
+                            <div className="flex flex-col gap-6 p-8 rounded-xl bg-white border border-primary/20 shadow-sm">
                                 <div
                                     className="w-full aspect-video bg-cover bg-center rounded-lg"
                                     style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCC2zwxzgBRnJ0sSsSDvaUsD28rymrAVsmb6iz0ttCaUlVlKfWN53b-ljslp-gfAc3T2-Xfz254bqZVU1WHIU7xMgY8rzEVih5trQAfsFc1Q_Gsdv4adITFmJKepqnKRuXw8KU-XVEPRHOmT8CSiohADQSrSr7M3AdJ1stnlWvHGoTFhApEWZ60Zx1pms9OOP7wU-imjFG87Vt7kPgIFgckNuAoGP4c_0rbQhSiWpO37D6Q5CYaF8XO6ajI0Fokn9FHvzH1gtlh6bO-")' }}
@@ -117,7 +117,7 @@ const About: React.FC = () => {
                                         <Eye className="size-6" />
                                         <h3 className="text-2xl font-bold">The Vision</h3>
                                     </div>
-                                    <p className="text-[#86775f] dark:text-[#a89984] leading-relaxed">
+                                    <p className="text-[#86775f] leading-relaxed">
                                         Creating spaces that inspire generations through timeless design. Our goal is to be the global benchmark for heirloom-quality contemporary furniture.
                                     </p>
                                 </div>
@@ -128,7 +128,7 @@ const About: React.FC = () => {
                     {/* Timeline Section */}
                     <section className="px-4 py-16">
                         <div className="flex flex-col items-center text-center mb-16 gap-4">
-                            <h2 className="text-4xl md:text-5xl font-black text-[#181511] dark:text-white">The Craftsmanship Journey</h2>
+                            <h2 className="text-4xl md:text-5xl font-black text-[#181511]">The Craftsmanship Journey</h2>
                             <div className="h-1.5 w-24 bg-primary rounded-full"></div>
                         </div>
                         <div className="max-w-3xl mx-auto">
@@ -145,7 +145,7 @@ const About: React.FC = () => {
                                     <div className="flex flex-col pb-8 pt-1">
                                         <h4 className="text-xl font-bold leading-normal">{step.title}</h4>
                                         <p className="text-primary font-bold mb-2">{step.year}</p>
-                                        <p className="text-[#86775f] dark:text-[#a89984] leading-relaxed">
+                                        <p className="text-[#86775f] leading-relaxed">
                                             {step.description}
                                         </p>
                                     </div>
@@ -155,11 +155,11 @@ const About: React.FC = () => {
                     </section>
 
                     {/* Meet the Team Section */}
-                    <section className="px-4 py-20 bg-[#f5f1ea] dark:bg-[#1d1a15] rounded-[3rem] my-10 border border-[#e1ddd5] dark:border-[#322e28]">
+                    <section className="px-4 py-20 bg-[#f5f1ea] rounded-[3rem] my-10 border border-[#e1ddd5]">
                         <div className="flex flex-col gap-6 text-center items-center mb-16">
-                            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[#181511] dark:text-white">The Visionaries</h2>
+                            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[#181511]">The Visionaries</h2>
                             <div className="h-1.5 w-24 bg-primary rounded-full"></div>
-                            <p className="text-[#86775f] dark:text-[#a89984] max-w-2xl text-xl leading-relaxed">
+                            <p className="text-[#86775f] max-w-2xl text-xl leading-relaxed">
                                 Meet the master designers and artisans behind every LuxeNest creation.
                             </p>
                         </div>
@@ -181,16 +181,16 @@ const About: React.FC = () => {
 
                     {/* CTA Section */}
                     <section className="px-4 py-20 text-center">
-                        <div className="bg-[#f5f1ea] dark:bg-[#1d1a15] rounded-[2rem] p-12 md:p-20 flex flex-col items-center gap-8 border border-[#e1ddd5] dark:border-[#322e28] shadow-2xl shadow-charcoal/5">
-                            <h2 className="text-4xl md:text-5xl font-black text-[#181511] dark:text-white">Experience the Heritage Firsthand</h2>
-                            <p className="text-[#86775f] dark:text-[#a89984] max-w-2xl text-xl leading-relaxed">
+                        <div className="bg-[#f5f1ea] rounded-[2rem] p-12 md:p-20 flex flex-col items-center gap-8 border border-[#e1ddd5] shadow-2xl shadow-charcoal/5">
+                            <h2 className="text-4xl md:text-5xl font-black text-[#181511]">Experience the Heritage Firsthand</h2>
+                            <p className="text-[#86775f] max-w-2xl text-xl leading-relaxed">
                                 Visit our flagship showrooms or book a private consultation with our design experts.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto mt-4">
                                 <button className="px-10 py-4 bg-primary text-white font-black uppercase tracking-widest rounded-xl hover:brightness-110 hover:scale-105 transition-all shadow-xl shadow-primary/20">
                                     Book a Consultation
                                 </button>
-                                <button className="px-10 py-4 border border-[#e1ddd5] dark:border-[#322e28] bg-white dark:bg-transparent text-[#86775f] hover:bg-[#fbfaf9] rounded-xl transition-all font-black uppercase tracking-widest">
+                                <button className="px-10 py-4 border border-[#e1ddd5] bg-white text-[#86775f] hover:bg-[#fbfaf9] rounded-xl transition-all font-black uppercase tracking-widest">
                                     Locate Showroom
                                 </button>
                             </div>

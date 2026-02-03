@@ -63,16 +63,16 @@ const BestSellers: React.FC = () => {
         <section className="bg-primary/5 py-20">
             <div className="max-w-[1500px] mx-auto px-6">
                 <div className="flex flex-col items-center text-center mb-16 gap-4">
-                    <h2 className="text-4xl md:text-5xl font-black text-[#181511] dark:text-white transition-colors duration-300">Our Best Sellers</h2>
+                    <h2 className="text-4xl md:text-5xl font-black text-[#181511] transition-colors duration-300">Our Best Sellers</h2>
                     <div className="h-1 w-20 bg-primary rounded-full"></div>
-                    <p className="text-[#86775f] dark:text-white/60 max-w-2xl text-lg leading-relaxed">Discover the pieces that define modern luxury. Loved by our clients and designed for a lifetime.</p>
+                    <p className="text-[#86775f] max-w-2xl text-lg leading-relaxed">Discover the pieces that define modern luxury. Loved by our clients and designed for a lifetime.</p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {products.map((product, index) => (
                         <Link
                             key={index}
                             to="/product/velvet-serenity-sofa"
-                            className="bg-white dark:bg-[#25211c] p-4 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-[#e1ddd5] dark:border-[#322e28] group block"
+                            className="bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-[#e1ddd5] group block"
                         >
                             <div className="rounded-lg overflow-hidden aspect-square mb-4 bg-[#f0eeea] relative">
                                 <img
@@ -82,12 +82,12 @@ const BestSellers: React.FC = () => {
                                 />
                                 <button
                                     onClick={(e) => handleWishlistToggle(e, product)}
-                                    className={`absolute top-3 right-3 p-2 rounded-full shadow-md transition-all duration-300 ${isInWishlist(product.id) ? 'bg-primary text-white scale-110' : 'bg-white/80 dark:bg-background-dark/80 text-charcoal dark:text-white opacity-0 group-hover:opacity-100'}`}
+                                    className={`absolute top-3 right-3 p-2 rounded-full shadow-md transition-all duration-300 ${isInWishlist(product.id) ? 'bg-primary text-white scale-110' : 'bg-white/80 text-charcoal opacity-0 group-hover:opacity-100'}`}
                                 >
                                     <Heart className={`size-4 ${isInWishlist(product.id) ? 'fill-current' : ''}`} />
                                 </button>
                             </div>
-                            <h4 className="font-bold text-lg mb-1 text-charcoal dark:text-white transition-colors duration-300">{product.name}</h4>
+                            <h4 className="font-bold text-lg mb-1 text-charcoal transition-colors duration-300">{product.name}</h4>
                             <p className="text-primary font-bold text-sm mb-3">${product.price}</p>
                             <button
                                 onClick={(e) => handleAddToCart(e, product)}

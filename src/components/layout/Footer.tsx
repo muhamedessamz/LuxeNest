@@ -4,7 +4,7 @@ import { Globe, Share2, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-background-light dark:bg-background-dark border-t border-primary/20 pt-20 pb-10 text-charcoal dark:text-white transition-colors duration-300">
+        <footer className="bg-background-light border-t border-primary/20 pt-20 pb-10 text-charcoal transition-colors duration-300">
             <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                 <div className="col-span-1 md:col-span-1">
                     <div className="flex items-center gap-3 mb-6">
@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
                         </div>
                         <h2 className="text-xl font-bold">LuxeNest</h2>
                     </div>
-                    <p className="text-charcoal/60 dark:text-white/60 text-sm leading-relaxed mb-6">
+                    <p className="text-charcoal/60 text-sm leading-relaxed mb-6">
                         Transforming houses into curated homes with timeless furniture and expert design advice.
                     </p>
                     <div className="flex gap-4 font-display">
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
                 </div>
                 <div>
                     <h4 className="font-bold mb-4 uppercase text-xs tracking-widest transition-colors duration-300">Services</h4>
-                    <ul className="text-[#86775f] dark:text-[#a39785] text-sm space-y-2 font-display">
+                    <ul className="text-[#86775f] text-sm space-y-2 font-display">
                         <li><Link className="hover:text-primary transition-colors" to="/services">Residential Design</Link></li>
                         <li><Link className="hover:text-primary transition-colors" to="/services">Commercial Space</Link></li>
                         <li><Link className="hover:text-primary transition-colors" to="/services">Furniture Sourcing</Link></li>
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
                 </div>
                 <div>
                     <h4 className="font-bold mb-4 uppercase text-xs tracking-widest transition-colors duration-300">Company</h4>
-                    <ul className="text-[#86775f] dark:text-[#a39785] text-sm space-y-2 font-display">
+                    <ul className="text-[#86775f] text-sm space-y-2 font-display">
                         <li><Link className="hover:text-primary transition-colors" to="/about">Our Story</Link></li>
                         <li><Link className="hover:text-primary transition-colors" to="/projects">Projects</Link></li>
                         <li><Link className="hover:text-primary transition-colors" to="/about">Sustainability</Link></li>
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
                     <h4 className="font-bold mb-4 uppercase text-xs tracking-widest transition-colors duration-300">Newsletter</h4>
                     <div className="flex gap-2">
                         <input
-                            className="bg-[#f0eeea] dark:bg-[#2d2a25] border-none rounded-lg text-sm px-4 py-2 flex-1 focus:ring-1 focus:ring-primary text-charcoal dark:text-white"
+                            className="bg-[#f0eeea] border-none rounded-lg text-sm px-4 py-2 flex-1 focus:ring-1 focus:ring-primary text-charcoal"
                             placeholder="Your email"
                             type="email"
                         />
@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
                 </div>
             </div>
             <div className="max-w-[1200px] mx-auto px-6 border-t border-primary/10 pt-10 text-center md:text-left">
-                <p className="text-xs text-charcoal/40 dark:text-white/40">© 2024 LuxeNest Interior Group. All rights reserved. Privacy Policy | Terms of Service</p>
+                <p className="text-xs text-charcoal/40">© 2024 LuxeNest Interior Group. All rights reserved. Privacy Policy | Terms of Service</p>
             </div>
         </footer>
     );

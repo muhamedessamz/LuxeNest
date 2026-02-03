@@ -23,7 +23,7 @@ const CategoriesGrid: React.FC = () => {
         <section className="max-w-[1200px] mx-auto py-20 px-6">
             <div className="flex flex-col items-center text-center mb-16 gap-3">
                 <span className="text-primary font-bold tracking-widest text-xs uppercase">Curated</span>
-                <h2 className="text-4xl md:text-5xl font-black mt-2 text-charcoal dark:text-white transition-colors duration-300">Featured Categories</h2>
+                <h2 className="text-4xl md:text-5xl font-black mt-2 text-charcoal transition-colors duration-300">Featured Categories</h2>
                 <div className="h-1 w-20 bg-primary rounded-full mt-2"></div>
                 <a className="text-primary font-bold text-sm border-b-2 border-primary pb-1 mt-6 hover:brightness-110 transition-all" href="#">Browse All Collections</a>
             </div>

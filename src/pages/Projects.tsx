@@ -48,7 +48,7 @@ const projects = [
 
 const Projects: React.FC = () => {
     return (
-        <div className="bg-background-light dark:bg-background-dark text-charcoal dark:text-white transition-colors duration-300">
+        <div className="bg-background-light text-charcoal transition-colors duration-300">
             <main className="flex flex-col flex-1">
                 <div className="px-4 md:px-20 lg:px-40 flex flex-1 justify-center py-10">
                     <div className="layout-content-container flex flex-col max-w-[1200px] flex-1">
@@ -57,9 +57,9 @@ const Projects: React.FC = () => {
                         {/* Page Heading Centered */}
                         <div className="flex flex-col items-center text-center gap-6 p-4 mb-12">
                             <div className="flex flex-col gap-4 items-center">
-                                <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight text-[#181511] dark:text-white">Portfolio</h1>
+                                <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight text-[#181511]">Portfolio</h1>
                                 <div className="h-1.5 w-24 bg-primary rounded-full"></div>
-                                <p className="text-[#86775f] dark:text-[#a39682] text-xl font-normal max-w-3xl leading-relaxed mt-4">
+                                <p className="text-[#86775f] text-xl font-normal max-w-3xl leading-relaxed mt-4">
                                     A curated gallery of luxury living spaces and bespoke interior design projects across the globe.
                                 </p>
                             </div>
@@ -93,27 +93,27 @@ const Projects: React.FC = () => {
                         </div>
 
                         {/* Design Process & Philosophy Centered */}
-                        <div className="mt-20 border-t border-[#e1ddd5] dark:border-[#322e28] pt-16 flex flex-col items-center">
+                        <div className="mt-20 border-t border-[#e1ddd5] pt-16 flex flex-col items-center">
                             <h2 className="text-4xl font-black leading-tight tracking-tight pb-12 text-center">Design Process & Philosophy</h2>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-4 text-center">
                                 <div className="flex flex-col gap-4 items-center">
                                     <Lightbulb className="text-primary size-10" />
                                     <h4 className="text-xl font-black">Concept Development</h4>
-                                    <p className="text-[#86775f] dark:text-[#a39682] text-sm leading-relaxed">
+                                    <p className="text-[#86775f] text-sm leading-relaxed">
                                         We begin every project by understanding your unique vision and lifestyle, translating it into a cohesive design narrative.
                                     </p>
                                 </div>
                                 <div className="flex flex-col gap-4 items-center">
                                     <Paintbrush className="text-primary size-10" />
                                     <h4 className="text-xl font-black">Bespoke Curation</h4>
-                                    <p className="text-[#86775f] dark:text-[#a39682] text-sm leading-relaxed">
+                                    <p className="text-[#86775f] text-sm leading-relaxed">
                                         Our designers source exclusive materials and handcrafted furniture from global artisans to create one-of-a-kind spaces.
                                     </p>
                                 </div>
                                 <div className="flex flex-col gap-4 items-center">
                                     <ShieldCheck className="text-primary size-10" />
                                     <h4 className="text-xl font-black">Meticulous Execution</h4>
-                                    <p className="text-[#86775f] dark:text-[#a39682] text-sm leading-relaxed">
+                                    <p className="text-[#86775f] text-sm leading-relaxed">
                                         From the first sketch to the final installation, we maintain the highest standards of luxury and precision.
                                     </p>
                                 </div>
@@ -122,16 +122,16 @@ const Projects: React.FC = () => {
 
                         {/* Call to Action - Themed to match image request */}
                         <div className="mt-20 mb-20 px-4">
-                            <div className="bg-[#f5f1ea] dark:bg-[#1d1a15] rounded-[2rem] p-12 md:p-20 text-center border border-[#e1ddd5] dark:border-[#322e28] shadow-2xl shadow-charcoal/5">
-                                <h2 className="text-4xl md:text-5xl font-black mb-6 text-[#181511] dark:text-white">Start Your Journey</h2>
-                                <p className="text-[#86775f] dark:text-[#a39682] text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+                            <div className="bg-[#f5f1ea] rounded-[2rem] p-12 md:p-20 text-center border border-[#e1ddd5] shadow-2xl shadow-charcoal/5">
+                                <h2 className="text-4xl md:text-5xl font-black mb-6 text-[#181511]">Start Your Journey</h2>
+                                <p className="text-[#86775f] text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
                                     Ready to transform your living space into a masterpiece? Consult with our award-winning design team.
                                 </p>
                                 <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-6 w-full md:w-auto">
                                     <button className="bg-primary text-white px-6 md:px-10 py-4 md:py-5 rounded-xl font-black uppercase tracking-widest hover:brightness-110 transition-all flex items-center justify-center gap-2 shadow-xl shadow-primary/20 w-full md:w-auto text-sm md:text-base">
                                         Book a Consultation <ArrowRight className="size-5" />
                                     </button>
-                                    <button className="border border-[#e1ddd5] dark:border-[#322e28] bg-white dark:bg-transparent text-[#86775f] px-6 md:px-10 py-4 md:py-5 rounded-xl font-black uppercase tracking-widest hover:bg-[#fbfaf9] dark:hover:bg-white/5 transition-all w-full md:w-auto text-sm md:text-base">
+                                    <button className="border border-[#e1ddd5] bg-white text-[#86775f] px-6 md:px-10 py-4 md:py-5 rounded-xl font-black uppercase tracking-widest hover:bg-[#fbfaf9] transition-all w-full md:w-auto text-sm md:text-base">
                                         View Price Guide
                                     </button>
                                 </div>

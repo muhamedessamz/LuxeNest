@@ -15,7 +15,7 @@ import { ScrollToTop } from './components/ScrollToTop.tsx';
 
 const App: React.FC = () => {
   return (
-    <div className="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden bg-background-light dark:bg-background-dark font-display text-charcoal dark:text-white transition-colors duration-300">
+    <div className="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden bg-background-light font-display text-charcoal transition-colors duration-300">
       <ScrollToTop />
       <Navbar />
       <main className="flex-1">

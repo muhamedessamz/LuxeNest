@@ -28,7 +28,7 @@ const products = [
         price: 799,
         oldPrice: '$1,200',
         badge: 'Sale',
-        badgeColor: 'bg-background-dark',
+        badgeColor: 'bg-primary',
         image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDEU_Kl1h0NPlv7BXtzlSD5eeGPehNayZc07j5uTDREWDJGPlBkW85rXoF5TpAGw6d-IW9q_56Xwlqj6DKnH7zO_vZ8cjf4OmQzLMh36oB5aAM9EoKsavK7uQOv8qBYkwxKaGSiNknzrNuxiqEC31DsI8yxDulj-zUcGQtUwhcL3jWUDgkn5-tIrF26APQd8TpalkpEnW7HWxT_4otb6ndPWEAJi1gLerr-ws7X8BCEcLYnWrdk52VRVgCJTIk5iE2kSXZpqbdxfAM1'
     },
     {
@@ -184,25 +184,25 @@ const Collections: React.FC = () => {
             <div className="flex flex-wrap gap-2 px-10 pt-8 justify-center">
                 <Link className="text-[#86775f] text-sm font-medium leading-normal hover:underline" to="/">Home</Link>
                 <span className="text-[#86775f] text-sm font-medium leading-normal">/</span>
-                <span className="text-[#181511] dark:text-white text-sm font-medium leading-normal">Collections</span>
+                <span className="text-[#181511] text-sm font-medium leading-normal">Collections</span>
             </div>
 
             {/* Page Heading Centered */}
             <div className="flex flex-col items-center text-center gap-4 px-10 py-8 mb-4">
-                <h1 className="text-[#181511] dark:text-white text-5xl md:text-6xl font-black leading-tight tracking-tight">Our Collections</h1>
+                <h1 className="text-[#181511] text-5xl md:text-6xl font-black leading-tight tracking-tight">Our Collections</h1>
                 <div className="h-1.5 w-24 bg-primary rounded-full"></div>
                 <p className="text-[#86775f] text-xl font-normal leading-relaxed max-w-2xl">Curated premium furniture for modern living.</p>
             </div>
 
             {/* Filters & Sort Bar */}
-            <div className="flex gap-3 px-10 py-3 flex-wrap pr-4 items-center border-b border-[#f0eeea] dark:border-[#333] mb-6">
+            <div className="flex gap-3 px-10 py-3 flex-wrap pr-4 items-center border-b border-[#f0eeea] mb-6">
                 <span className="text-sm font-bold text-[#86775f] uppercase tracking-wider mr-2">Sort by:</span>
-                <button className="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#f0eeea] dark:bg-[#2d2a25] px-4 hover:ring-1 ring-primary transition-all">
-                    <p className="text-[#181511] dark:text-white text-sm font-medium leading-normal">New Arrivals</p>
+                <button className="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#f0eeea] px-4 hover:ring-1 ring-primary transition-all">
+                    <p className="text-[#181511] text-sm font-medium leading-normal">New Arrivals</p>
                     <ChevronDown className="size-4" />
                 </button>
-                <button className="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#f0eeea] dark:bg-[#2d2a25] px-4 hover:ring-1 ring-primary transition-all">
-                    <p className="text-[#181511] dark:text-white text-sm font-medium leading-normal">Best Sellers</p>
+                <button className="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#f0eeea] px-4 hover:ring-1 ring-primary transition-all">
+                    <p className="text-[#181511] text-sm font-medium leading-normal">Best Sellers</p>
                     <ChevronDown className="size-4" />
                 </button>
                 <button className="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary text-white px-4">
@@ -214,8 +214,8 @@ const Collections: React.FC = () => {
             <div className="flex flex-col lg:flex-row gap-8 px-10 pb-20">
                 {/* Side Navigation Filters */}
                 <aside className="w-full lg:w-64 flex flex-col gap-6 shrink-0">
-                    <div className="bg-white dark:bg-[#25211c] rounded-2xl p-6 shadow-sm border border-[#e1ddd5] dark:border-[#322e28]">
-                        <h2 className="text-[#181511] dark:text-white text-lg font-bold leading-normal mb-4">Filters</h2>
+                    <div className="bg-white rounded-2xl p-6 shadow-sm border border-[#e1ddd5]">
+                        <h2 className="text-[#181511] text-lg font-bold leading-normal mb-4">Filters</h2>
                         <div className="flex flex-col gap-2">
                             <div className="flex items-center justify-between px-3 py-2.5 rounded-lg bg-primary/10 text-primary border border-primary/20">
                                 <div className="flex items-center gap-3">
@@ -233,14 +233,14 @@ const Collections: React.FC = () => {
                                     </label>
                                 ))}
                             </div>
-                            <div className="flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-[#f0eeea] dark:hover:bg-[#2d2a25] transition-colors cursor-pointer">
+                            <div className="flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-[#f0eeea] transition-colors cursor-pointer">
                                 <div className="flex items-center gap-3">
                                     <Tag className="size-5" />
                                     <p className="text-sm font-medium leading-normal">Price Range</p>
                                 </div>
                                 <ChevronDown className="size-4" />
                             </div>
-                            <div className="flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-[#f0eeea] dark:hover:bg-[#2d2a25] transition-colors cursor-pointer">
+                            <div className="flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-[#f0eeea] transition-colors cursor-pointer">
                                 <div className="flex items-center gap-3">
                                     <Layers className="size-5" />
                                     <p className="text-sm font-medium leading-normal">Material</p>
@@ -251,7 +251,7 @@ const Collections: React.FC = () => {
                         <button className="mt-8 w-full flex items-center justify-center rounded-lg h-11 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-110 shadow-lg shadow-primary/20 transition-all">
                             <span className="truncate">Apply Filters</span>
                         </button>
-                        <button className="mt-2 w-full flex items-center justify-center rounded-lg h-11 px-4 text-[#86775f] text-sm font-bold leading-normal hover:bg-[#f0eeea] dark:hover:bg-[#2d2a25] transition-all">
+                        <button className="mt-2 w-full flex items-center justify-center rounded-lg h-11 px-4 text-[#86775f] text-sm font-bold leading-normal hover:bg-[#f0eeea] transition-all">
                             <span className="truncate">Reset All</span>
                         </button>
                     </div>
@@ -264,7 +264,7 @@ const Collections: React.FC = () => {
                             <Link
                                 key={product.id}
                                 to="/product/velvet-serenity-sofa"
-                                className="flex flex-col bg-white dark:bg-[#25211c] rounded-2xl overflow-hidden shadow-sm border border-[#e1ddd5] dark:border-[#322e28] group hover:shadow-xl transition-all duration-300"
+                                className="flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-[#e1ddd5] group hover:shadow-xl transition-all duration-300"
                             >
                                 <div className="relative aspect-[4/5] overflow-hidden">
                                     <img
@@ -279,15 +279,15 @@ const Collections: React.FC = () => {
                                     )}
                                     <button
                                         onClick={(e) => handleWishlistToggle(e, product)}
-                                        className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 dark:bg-[#1d1a15]/90 flex items-center justify-center shadow-lg transform translate-x-12 group-hover:translate-x-0 transition-all duration-300 hover:scale-110 active:scale-90"
+                                        className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 flex items-center justify-center shadow-lg transform translate-x-12 group-hover:translate-x-0 transition-all duration-300 hover:scale-110 active:scale-90"
                                     >
-                                        <Heart className={`size-5 ${isInWishlist(product.id) ? 'fill-primary text-primary' : 'text-charcoal dark:text-white'}`} />
+                                        <Heart className={`size-5 ${isInWishlist(product.id) ? 'fill-primary text-primary' : 'text-charcoal'}`} />
                                     </button>
                                 </div>
                                 <div className="p-6 flex flex-col gap-4 text-center items-center">
                                     <div className="flex flex-col gap-2 items-center w-full">
                                         <p className="text-[#86775f] text-xs font-bold uppercase tracking-widest">{product.category}</p>
-                                        <h3 className="text-[#181511] dark:text-white text-xl font-black">{product.name}</h3>
+                                        <h3 className="text-[#181511] text-xl font-black">{product.name}</h3>
                                         <div className="flex items-center gap-3 justify-center">
                                             <p className="text-primary text-2xl font-bold leading-tight">${product.price}</p>
                                             {// @ts-ignore
@@ -311,7 +311,7 @@ const Collections: React.FC = () => {
                         <button
                             onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
                             disabled={currentPage === 1}
-                            className="flex items-center justify-center h-10 w-10 rounded-lg border border-[#f0eeea] dark:border-[#333] hover:bg-primary/10 text-[#86775f] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="flex items-center justify-center h-10 w-10 rounded-lg border border-[#f0eeea] hover:bg-primary/10 text-[#86775f] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             <ChevronLeft className="size-5" />
                         </button>
@@ -321,8 +321,8 @@ const Collections: React.FC = () => {
                                 key={idx}
                                 onClick={() => handlePageChange(idx + 1)}
                                 className={`flex items-center justify-center h-10 w-10 rounded-lg transition-colors font-bold ${currentPage === idx + 1
-                                        ? 'bg-primary text-white'
-                                        : 'border border-[#f0eeea] dark:border-[#333] hover:bg-primary/10 text-[#181511] dark:text-white'
+                                    ? 'bg-primary text-white'
+                                    : 'border border-[#f0eeea] hover:bg-primary/10 text-[#181511]'
                                     }`}
                             >
                                 {idx + 1}
@@ -332,7 +332,7 @@ const Collections: React.FC = () => {
                         <button
                             onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
                             disabled={currentPage === totalPages}
-                            className="flex items-center justify-center h-10 w-10 rounded-lg border border-[#f0eeea] dark:border-[#333] hover:bg-primary/10 text-[#86775f] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="flex items-center justify-center h-10 w-10 rounded-lg border border-[#f0eeea] hover:bg-primary/10 text-[#86775f] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             <ChevronRight className="size-5" />
                         </button>

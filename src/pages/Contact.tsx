@@ -32,19 +32,19 @@ const Contact: React.FC = () => {
     const [activeShowroom, setActiveShowroom] = useState(showrooms[0]);
 
     return (
-        <div className="bg-background-light dark:bg-background-dark text-charcoal dark:text-white transition-colors duration-300">
+        <div className="bg-background-light text-charcoal transition-colors duration-300">
             <main className="flex-1 flex flex-col items-center">
                 <div className="w-full max-w-[1200px] px-6 py-10">
 
                     {/* Page Heading */}
-                    <div className="flex flex-wrap justify-between items-end gap-6 mb-12">
-                        <div className="flex min-w-72 flex-col gap-3">
+                    <div className="flex flex-col items-center text-center gap-6 mb-12">
+                        <div className="flex min-w-72 flex-col gap-3 items-center">
                             <h1 className="text-4xl md:text-5xl font-black leading-tight tracking-tight">Get in Touch</h1>
-                            <p className="text-[#86775f] dark:text-gray-400 text-lg max-w-xl">
+                            <p className="text-[#86775f] text-lg max-w-xl">
                                 Whether you're looking for a statement piece or a complete home makeover, our concierge team is here to guide you.
                             </p>
                         </div>
-                        <button className="flex min-w-[140px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-[#f0eeea] dark:bg-[#322e28] text-charcoal dark:text-white text-sm font-bold border border-transparent hover:border-primary transition-all">
+                        <button className="flex min-w-[140px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-[#f0eeea] text-charcoal text-sm font-bold border border-transparent hover:border-primary transition-all">
                             View Showrooms
                         </button>
                     </div>
@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
 
                         {/* Contact Form Section */}
-                        <div className="flex flex-col gap-8 bg-white dark:bg-[#25211c] p-8 md:p-10 rounded-3xl border border-[#e1ddd5] dark:border-[#322e28] shadow-xl shadow-charcoal/5 relative overflow-hidden group">
+                        <div className="flex flex-col gap-8 bg-white p-8 md:p-10 rounded-3xl border border-[#e1ddd5] shadow-xl shadow-charcoal/5 relative overflow-hidden group">
                             <div className="absolute top-0 left-0 w-2 h-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             <div className="flex flex-col gap-2">
                                 <h2 className="text-2xl font-black">Send a Message</h2>
@@ -65,7 +65,7 @@ const Contact: React.FC = () => {
                                         <label className="text-xs font-black uppercase tracking-widest text-[#86775f]">First Name</label>
                                         <div className="relative">
                                             <input
-                                                className="w-full rounded-xl border border-[#e1ddd5] dark:border-[#322e28] bg-[#fbfaf9] dark:bg-[#1d1a15] focus:border-primary focus:ring-4 focus:ring-primary/10 h-14 outline-none px-5 transition-all text-sm font-medium"
+                                                className="w-full rounded-xl border border-[#e1ddd5] bg-[#fbfaf9] focus:border-primary focus:ring-4 focus:ring-primary/10 h-14 outline-none px-5 transition-all text-sm font-medium"
                                                 placeholder="Jane"
                                                 type="text"
                                             />
@@ -75,7 +75,7 @@ const Contact: React.FC = () => {
                                         <label className="text-xs font-black uppercase tracking-widest text-[#86775f]">Last Name</label>
                                         <div className="relative">
                                             <input
-                                                className="w-full rounded-xl border border-[#e1ddd5] dark:border-[#322e28] bg-[#fbfaf9] dark:bg-[#1d1a15] focus:border-primary focus:ring-4 focus:ring-primary/10 h-14 outline-none px-5 transition-all text-sm font-medium"
+                                                className="w-full rounded-xl border border-[#e1ddd5] bg-[#fbfaf9] focus:border-primary focus:ring-4 focus:ring-primary/10 h-14 outline-none px-5 transition-all text-sm font-medium"
                                                 placeholder="Doe"
                                                 type="text"
                                             />
@@ -86,7 +86,7 @@ const Contact: React.FC = () => {
                                     <label className="text-xs font-black uppercase tracking-widest text-[#86775f]">Email Address</label>
                                     <div className="relative">
                                         <input
-                                            className="w-full rounded-xl border border-[#e1ddd5] dark:border-[#322e28] bg-[#fbfaf9] dark:bg-[#1d1a15] focus:border-primary focus:ring-4 focus:ring-primary/10 h-14 outline-none px-5 transition-all text-sm font-medium"
+                                            className="w-full rounded-xl border border-[#e1ddd5] bg-[#fbfaf9] focus:border-primary focus:ring-4 focus:ring-primary/10 h-14 outline-none px-5 transition-all text-sm font-medium"
                                             placeholder="jane@example.com"
                                             type="email"
                                         />
@@ -96,7 +96,7 @@ const Contact: React.FC = () => {
                                 <div className="flex flex-col gap-2">
                                     <label className="text-xs font-black uppercase tracking-widest text-[#86775f]">Message</label>
                                     <textarea
-                                        className="w-full rounded-xl border border-[#e1ddd5] dark:border-[#322e28] bg-[#fbfaf9] dark:bg-[#1d1a15] focus:border-primary focus:ring-4 focus:ring-primary/10 resize-none outline-none p-5 transition-all text-sm font-medium"
+                                        className="w-full rounded-xl border border-[#e1ddd5] bg-[#fbfaf9] focus:border-primary focus:ring-4 focus:ring-primary/10 resize-none outline-none p-5 transition-all text-sm font-medium"
                                         placeholder="Tell us about your project or requested pieces..."
                                         rows={5}
                                     ></textarea>
@@ -116,45 +116,45 @@ const Contact: React.FC = () => {
 
                         {/* Contact Info Section */}
                         <div className="flex flex-col gap-8">
-                            <div className="flex flex-col gap-4">
-                                <h2 className="text-2xl font-bold border-b border-[#f0eeea] dark:border-[#322e28] pb-4">Our Concierge</h2>
-                                <p className="text-[#86775f] dark:text-gray-400">
+                            <div className="flex flex-col gap-4 items-center text-center">
+                                <h2 className="text-2xl font-bold border-b border-[#f0eeea] pb-4 w-full">Our Concierge</h2>
+                                <p className="text-[#86775f]">
                                     Available Monday through Friday, 9am - 6pm EST for personalized design consultation.
                                 </p>
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
                                 {/* Studio Card */}
-                                <div className="flex items-start gap-4 rounded-xl border border-[#e1ddd5] dark:border-[#322e28] bg-white dark:bg-[#25211c] p-6 shadow-sm hover:shadow-md transition-all">
+                                <div className="flex items-start gap-4 rounded-xl border border-[#e1ddd5] bg-white p-6 shadow-sm hover:shadow-md transition-all">
                                     <div className="text-primary p-3 bg-primary/10 rounded-lg">
                                         <MapPin className="size-6" />
                                     </div>
                                     <div className="flex flex-col gap-1">
                                         <h3 className="text-lg font-bold">Main Studio</h3>
-                                        <p className="text-[#86775f] dark:text-gray-400 text-sm leading-relaxed">
+                                        <p className="text-[#86775f] text-sm leading-relaxed">
                                             123 Elegance Blvd, Design District<br />New York, NY 10012
                                         </p>
                                     </div>
                                 </div>
                                 {/* Call Card */}
-                                <div className="flex items-start gap-4 rounded-xl border border-[#e1ddd5] dark:border-[#322e28] bg-white dark:bg-[#25211c] p-6 shadow-sm hover:shadow-md transition-all">
+                                <div className="flex items-start gap-4 rounded-xl border border-[#e1ddd5] bg-white p-6 shadow-sm hover:shadow-md transition-all">
                                     <div className="text-primary p-3 bg-primary/10 rounded-lg">
                                         <Phone className="size-6" />
                                     </div>
                                     <div className="flex flex-col gap-1">
                                         <h3 className="text-lg font-bold">Call Us</h3>
-                                        <p className="text-[#86775f] dark:text-gray-400 text-sm">+1 (800) LUX-NEST</p>
-                                        <p className="text-[#86775f] dark:text-gray-400 text-sm">+1 (212) 555-0192</p>
+                                        <p className="text-[#86775f] text-sm">+1 (800) LUX-NEST</p>
+                                        <p className="text-[#86775f] text-sm">+1 (212) 555-0192</p>
                                     </div>
                                 </div>
                                 {/* Email Card */}
-                                <div className="flex items-start gap-4 rounded-xl border border-[#e1ddd5] dark:border-[#322e28] bg-white dark:bg-[#25211c] p-6 shadow-sm hover:shadow-md transition-all">
+                                <div className="flex items-start gap-4 rounded-xl border border-[#e1ddd5] bg-white p-6 shadow-sm hover:shadow-md transition-all">
                                     <div className="text-primary p-3 bg-primary/10 rounded-lg">
                                         <Mail className="size-6" />
                                     </div>
                                     <div className="flex flex-col gap-1">
                                         <h3 className="text-lg font-bold">Email Us</h3>
-                                        <p className="text-[#86775f] dark:text-gray-400 text-sm">concierge@luxenest.com</p>
-                                        <p className="text-[#86775f] dark:text-gray-400 text-sm">press@luxenest.com</p>
+                                        <p className="text-[#86775f] text-sm">concierge@luxenest.com</p>
+                                        <p className="text-[#86775f] text-sm">press@luxenest.com</p>
                                     </div>
                                 </div>
                             </div>
@@ -174,7 +174,7 @@ const Contact: React.FC = () => {
                                     <div
                                         key={idx}
                                         onClick={() => setActiveShowroom(showroom)}
-                                        className={`group p-6 rounded-2xl border transition-all cursor-pointer shadow-sm hover:shadow-xl ${activeShowroom.city === showroom.city ? 'border-primary bg-primary/5 ring-1 ring-primary' : 'border-[#e1ddd5] dark:border-[#322e28] bg-white dark:bg-[#25211c] hover:border-primary'}`}
+                                        className={`group p-6 rounded-2xl border transition-all cursor-pointer shadow-sm hover:shadow-xl ${activeShowroom.city === showroom.city ? 'border-primary bg-primary/5 ring-1 ring-primary' : 'border-[#e1ddd5] bg-white hover:border-primary'}`}
                                     >
                                         <div className="flex justify-between items-start mb-4">
                                             <div>
@@ -183,7 +183,7 @@ const Contact: React.FC = () => {
                                                 </span>
                                                 <h3 className="font-bold text-lg">{showroom.name}</h3>
                                             </div>
-                                            <div className={`size-10 rounded-full flex items-center justify-center transition-all ${activeShowroom.city === showroom.city ? 'bg-primary text-white' : 'bg-[#f0eeea] dark:bg-[#322e28] text-[#86775f] group-hover:bg-primary group-hover:text-white'}`}>
+                                            <div className={`size-10 rounded-full flex items-center justify-center transition-all ${activeShowroom.city === showroom.city ? 'bg-primary text-white' : 'bg-[#f0eeea] text-[#86775f] group-hover:bg-primary group-hover:text-white'}`}>
                                                 <MapPin className="size-5" />
                                             </div>
                                         </div>
@@ -198,7 +198,7 @@ const Contact: React.FC = () => {
                                                 <Clock className="size-4 shrink-0" /> {showroom.hours}
                                             </p>
                                         </div>
-                                        <div className="mt-6 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-[#181511] dark:text-white hover:text-primary transition-colors">
+                                        <div className="mt-6 flex items-center gap-2 text-xs font-black uppercase tracking-widest text-[#181511] hover:text-primary transition-colors">
                                             View Details <div className="size-1 bg-primary rounded-full"></div>
                                         </div>
                                     </div>
@@ -206,11 +206,11 @@ const Contact: React.FC = () => {
                             </div>
 
                             {/* Map Display */}
-                            <div className="lg:col-span-2 relative h-[400px] lg:h-auto rounded-3xl overflow-hidden border border-[#e1ddd5] dark:border-[#322e28] shadow-2xl group min-h-[500px]">
+                            <div className="lg:col-span-2 relative h-[400px] lg:h-auto rounded-3xl overflow-hidden border border-[#e1ddd5] shadow-2xl group min-h-[500px]">
                                 <iframe
                                     key={activeShowroom.city}
                                     src={activeShowroom.mapUrl}
-                                    className="w-full h-full grayscale opacity-80 dark:opacity-60 contrast-125 dark:contrast-150 transition-all duration-1000 group-hover:grayscale-0 group-hover:opacity-100"
+                                    className="w-full h-full grayscale opacity-80 contrast-125 transition-all duration-1000 group-hover:grayscale-0 group-hover:opacity-100"
                                     style={{ border: 0 }}
                                     allowFullScreen={true}
                                     loading="lazy"

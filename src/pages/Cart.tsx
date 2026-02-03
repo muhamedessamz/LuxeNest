@@ -43,38 +43,38 @@ const Cart: React.FC = () => {
     const grandTotal = subtotal + estimatedTax;
 
     return (
-        <div className="bg-background-light dark:bg-background-dark text-charcoal dark:text-white transition-colors duration-300 min-h-screen">
+        <div className="bg-background-light text-charcoal transition-colors duration-300 min-h-screen">
             <main className="flex flex-col items-center py-8">
-                <div className="layout-content-container flex flex-col w-full max-w-[1500px] px-6 text-charcoal dark:text-white">
+                <div className="layout-content-container flex flex-col w-full max-w-[1500px] px-6 text-charcoal">
 
                     {/* Breadcrumbs */}
                     <div className="flex flex-wrap gap-2 py-2">
                         <Link className="text-[#86775f] text-sm font-medium leading-normal hover:text-primary transition-colors" to="/">Home</Link>
                         <span className="text-[#86775f] text-sm font-medium leading-normal">/</span>
-                        <span className="text-charcoal dark:text-[#fbfaf9] text-sm font-bold leading-normal">Shopping Cart</span>
+                        <span className="text-charcoal text-sm font-bold leading-normal">Shopping Cart</span>
                     </div>
 
                     {/* Page Heading */}
                     <div className="flex flex-wrap justify-between items-end gap-3 py-6">
                         <div className="flex min-w-72 flex-col gap-2">
-                            <h1 className="text-charcoal dark:text-[#fbfaf9] text-4xl font-black leading-tight tracking-tight">Your Selection</h1>
+                            <h1 className="text-charcoal text-4xl font-black leading-tight tracking-tight">Your Selection</h1>
                             <p className="text-[#86775f] text-base font-normal leading-normal">Review your curated pieces and prepare for checkout.</p>
                         </div>
                     </div>
 
                     {/* Toggle Buttons */}
                     <div className="flex py-3 mb-8">
-                        <div className="flex h-14 w-full max-w-md items-center justify-center rounded-2xl bg-[#f0eeea] dark:bg-[#2d2a25] p-1.5 relative shadow-inner">
+                        <div className="flex h-14 w-full max-w-md items-center justify-center rounded-2xl bg-[#f0eeea] p-1.5 relative shadow-inner">
                             <button
                                 onClick={() => handleViewChange('cart')}
-                                className={`flex-1 flex items-center justify-center gap-2 rounded-xl h-full text-sm font-bold transition-all duration-300 ${view === 'cart' ? 'bg-white dark:bg-[#3a352e] text-charcoal dark:text-white shadow-sm scale-[1.02]' : 'text-[#86775f] hover:text-primary'}`}
+                                className={`flex-1 flex items-center justify-center gap-2 rounded-xl h-full text-sm font-bold transition-all duration-300 ${view === 'cart' ? 'bg-white text-charcoal shadow-sm scale-[1.02]' : 'text-[#86775f] hover:text-primary'}`}
                             >
                                 <ShoppingCart className={`size-4 ${view === 'cart' ? 'text-primary' : ''}`} />
                                 Shopping Cart ({cart.length})
                             </button>
                             <button
                                 onClick={() => handleViewChange('wishlist')}
-                                className={`flex-1 flex items-center justify-center gap-2 rounded-xl h-full text-sm font-bold transition-all duration-300 ${view === 'wishlist' ? 'bg-white dark:bg-[#3a352e] text-charcoal dark:text-white shadow-sm scale-[1.02]' : 'text-[#86775f] hover:text-primary'}`}
+                                className={`flex-1 flex items-center justify-center gap-2 rounded-xl h-full text-sm font-bold transition-all duration-300 ${view === 'wishlist' ? 'bg-white text-charcoal shadow-sm scale-[1.02]' : 'text-[#86775f] hover:text-primary'}`}
                             >
                                 <Heart className={`size-4 ${view === 'wishlist' ? 'text-primary fill-primary' : ''}`} />
                                 Wishlist ({wishlistCount})
@@ -87,28 +87,28 @@ const Cart: React.FC = () => {
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
                                 {/* Table (Product List) */}
                                 <div className="lg:col-span-2 space-y-8">
-                                    <div className="overflow-hidden rounded-xl border border-[#e1ddd5] dark:border-[#3a352e] bg-white dark:bg-[#26221d] shadow-sm">
+                                    <div className="overflow-hidden rounded-xl border border-[#e1ddd5] bg-white shadow-sm">
                                         <div className="overflow-x-auto">
                                             <table className="w-full text-left">
                                                 <thead>
-                                                    <tr className="bg-background-light dark:bg-[#2d2a25] border-b border-[#e1ddd5] dark:border-[#3a352e]">
+                                                    <tr className="bg-background-light border-b border-[#e1ddd5]">
                                                         <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-[#86775f]">Product</th>
                                                         <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-[#86775f] text-center">Quantity</th>
                                                         <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-[#86775f] text-right">Price</th>
                                                         <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-[#86775f] text-right">Total</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody className="divide-y divide-[#e1ddd5] dark:divide-[#3a352e]">
+                                                <tbody className="divide-y divide-[#e1ddd5]">
                                                     {cart.map((item) => (
-                                                        <tr key={item.id} className="hover:bg-background-light/50 dark:hover:bg-white/5 transition-colors">
+                                                        <tr key={item.id} className="hover:bg-background-light/50 transition-colors">
                                                             <td className="px-6 py-6 font-display">
                                                                 <div className="flex items-center gap-4">
                                                                     <div
-                                                                        className="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-20 h-20 border border-[#e1ddd5] dark:border-[#3a352e] shadow-sm"
+                                                                        className="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-20 h-20 border border-[#e1ddd5] shadow-sm"
                                                                         style={{ backgroundImage: `url("${item.image}")` }}
                                                                     ></div>
                                                                     <div className="flex flex-col">
-                                                                        <span className="font-bold text-charcoal dark:text-[#fbfaf9]">{item.name}</span>
+                                                                        <span className="font-bold text-charcoal">{item.name}</span>
                                                                         <span className="text-xs text-[#86775f] uppercase tracking-wider mt-1">SKU: {item.sku || 'N/A'}</span>
                                                                         <button
                                                                             onClick={() => removeFromCart(item.id)}
@@ -120,24 +120,24 @@ const Cart: React.FC = () => {
                                                                 </div>
                                                             </td>
                                                             <td className="px-6 py-6 text-center">
-                                                                <div className="inline-flex items-center border border-[#e1ddd5] dark:border-[#3a352e] rounded-lg bg-[#fbfaf9] dark:bg-[#2d2a25] overflow-hidden">
+                                                                <div className="inline-flex items-center border border-[#e1ddd5] rounded-lg bg-[#fbfaf9] overflow-hidden">
                                                                     <button
                                                                         onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                                                                        className="px-3 py-1 text-[#86775f] hover:text-primary hover:bg-[#f0eeea] dark:hover:bg-white/5 transition-all text-lg"
+                                                                        className="px-3 py-1 text-[#86775f] hover:text-primary hover:bg-[#f0eeea] transition-all text-lg"
                                                                     >
                                                                         −
                                                                     </button>
-                                                                    <span className="px-4 py-1 font-bold border-x border-[#e1ddd5] dark:border-[#3a352e] min-w-[3rem]">{item.quantity}</span>
+                                                                    <span className="px-4 py-1 font-bold border-x border-[#e1ddd5] min-w-[3rem]">{item.quantity}</span>
                                                                     <button
                                                                         onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                                                                        className="px-3 py-1 text-[#86775f] hover:text-primary hover:bg-[#f0eeea] dark:hover:bg-white/5 transition-all text-lg"
+                                                                        className="px-3 py-1 text-[#86775f] hover:text-primary hover:bg-[#f0eeea] transition-all text-lg"
                                                                     >
                                                                         +
                                                                     </button>
                                                                 </div>
                                                             </td>
                                                             <td className="px-6 py-6 text-right font-medium text-[#86775f] font-display">${Number(item.price).toLocaleString()}</td>
-                                                            <td className="px-6 py-6 text-right font-bold text-charcoal dark:text-[#fbfaf9] font-display">${(Number(item.price) * item.quantity).toLocaleString()}</td>
+                                                            <td className="px-6 py-6 text-right font-bold text-charcoal font-display">${(Number(item.price) * item.quantity).toLocaleString()}</td>
                                                         </tr>
                                                     ))}
                                                 </tbody>
@@ -146,14 +146,14 @@ const Cart: React.FC = () => {
                                     </div>
 
                                     {/* Shipping Estimator */}
-                                    <div className="p-8 rounded-xl border border-[#e1ddd5] dark:border-[#3a352e] bg-white dark:bg-[#26221d] shadow-sm">
+                                    <div className="p-8 rounded-xl border border-[#e1ddd5] bg-white shadow-sm">
                                         <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
                                             <Truck className="text-primary size-5" />
                                             Shipping Estimator
                                         </h3>
                                         <div className="flex flex-col sm:flex-row gap-4">
                                             <div className="flex-1">
-                                                <select className="w-full rounded-lg border-[#e1ddd5] dark:border-[#3a352e] bg-[#fbfaf9] dark:bg-[#2d2a25] text-sm focus:ring-primary focus:border-primary p-3 outline-none">
+                                                <select className="w-full rounded-lg border-[#e1ddd5] bg-[#fbfaf9] text-sm focus:ring-primary focus:border-primary p-3 outline-none">
                                                     <option>United States</option>
                                                     <option>United Kingdom</option>
                                                     <option>Canada</option>
@@ -162,12 +162,12 @@ const Cart: React.FC = () => {
                                             </div>
                                             <div className="flex-1">
                                                 <input
-                                                    className="w-full rounded-lg border-[#e1ddd5] dark:border-[#3a352e] bg-[#fbfaf9] dark:bg-[#2d2a25] text-sm focus:ring-primary focus:border-primary p-3 outline-none"
+                                                    className="w-full rounded-lg border-[#e1ddd5] bg-[#fbfaf9] text-sm focus:ring-primary focus:border-primary p-3 outline-none"
                                                     placeholder="Zip Code"
                                                     type="text"
                                                 />
                                             </div>
-                                            <button className="px-8 py-3 bg-[#f0eeea] dark:bg-[#322e28] rounded-lg text-sm font-bold hover:bg-primary hover:text-[#1d1a15] transition-all">
+                                            <button className="px-8 py-3 bg-[#f0eeea] rounded-lg text-sm font-bold hover:bg-primary hover:text-[#1d1a15] transition-all">
                                                 Calculate
                                             </button>
                                         </div>
@@ -176,9 +176,9 @@ const Cart: React.FC = () => {
 
                                 {/* Order Summary */}
                                 <div className="lg:col-span-1">
-                                    <div className="p-8 rounded-2xl border border-[#e1ddd5] dark:border-[#3a352e] bg-white dark:bg-[#26221d] sticky top-24 shadow-xl">
+                                    <div className="p-8 rounded-2xl border border-[#e1ddd5] bg-white sticky top-24 shadow-xl">
                                         <h3 className="text-xl font-bold mb-8">Order Summary</h3>
-                                        <div className="space-y-4 mb-8 border-b border-[#e1ddd5] dark:border-[#3a352e] pb-8">
+                                        <div className="space-y-4 mb-8 border-b border-[#e1ddd5] pb-8">
                                             <div className="flex justify-between text-base">
                                                 <span className="text-[#86775f]">Subtotal</span>
                                                 <span className="font-bold">${subtotal.toLocaleString()}</span>
@@ -212,21 +212,21 @@ const Cart: React.FC = () => {
                                             </div>
                                         </div>
 
-                                        <div className="mt-8 pt-8 border-t border-[#e1ddd5] dark:border-[#3a352e]">
+                                        <div className="mt-8 pt-8 border-t border-[#e1ddd5]">
                                             <p className="text-[10px] font-black mb-4 uppercase tracking-[0.2em] text-[#86775f]">Accepted Payments</p>
                                             <div className="flex gap-3 opacity-40 grayscale hover:opacity-100 hover:grayscale-0 transition-all cursor-crosshair">
-                                                <div className="w-10 h-6 bg-[#f0eeea] dark:bg-white/10 rounded flex items-center justify-center">VISA</div>
-                                                <div className="w-10 h-6 bg-[#f0eeea] dark:bg-white/10 rounded flex items-center justify-center text-[10px]">AMEX</div>
-                                                <div className="w-10 h-6 bg-[#f0eeea] dark:bg-white/10 rounded flex items-center justify-center">MC</div>
-                                                <div className="w-10 h-6 bg-[#f0eeea] dark:bg-white/10 rounded flex items-center justify-center text-[8px]">PAYPAL</div>
+                                                <div className="w-10 h-6 bg-[#f0eeea] rounded flex items-center justify-center">VISA</div>
+                                                <div className="w-10 h-6 bg-[#f0eeea] rounded flex items-center justify-center text-[10px]">AMEX</div>
+                                                <div className="w-10 h-6 bg-[#f0eeea] rounded flex items-center justify-center">MC</div>
+                                                <div className="w-10 h-6 bg-[#f0eeea] rounded flex items-center justify-center text-[8px]">PAYPAL</div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         ) : (
-                            <div className="py-20 flex flex-col items-center justify-center text-center gap-6 bg-white dark:bg-[#26221d] rounded-2xl border border-dashed border-[#e1ddd5] dark:border-[#3a352e] animate-in fade-in duration-500">
-                                <div className="size-20 bg-[#f0eeea] dark:bg-[#2d2a25] rounded-full flex items-center justify-center">
+                            <div className="py-20 flex flex-col items-center justify-center text-center gap-6 bg-white rounded-2xl border border-dashed border-[#e1ddd5] animate-in fade-in duration-500">
+                                <div className="size-20 bg-[#f0eeea] rounded-full flex items-center justify-center">
                                     <ShoppingCart className="size-10 text-[#86775f]/50" />
                                 </div>
                                 <div className="max-w-md">
@@ -242,7 +242,7 @@ const Cart: React.FC = () => {
                         wishlist.length > 0 ? (
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
                                 {wishlist.map((item) => (
-                                    <div key={item.id} className="group bg-white dark:bg-[#26221d] rounded-2xl overflow-hidden border border-[#e1ddd5] dark:border-[#3a352e] shadow-sm hover:shadow-xl transition-all duration-300">
+                                    <div key={item.id} className="group bg-white rounded-2xl overflow-hidden border border-[#e1ddd5] shadow-sm hover:shadow-xl transition-all duration-300">
                                         <div className="relative aspect-square overflow-hidden">
                                             <div
                                                 className="absolute inset-0 bg-center bg-cover transition-transform duration-700 group-hover:scale-110"
@@ -250,7 +250,7 @@ const Cart: React.FC = () => {
                                             ></div>
                                             <button
                                                 onClick={() => removeFromWishlist(item.id)}
-                                                className="absolute top-4 right-4 size-10 bg-white/90 dark:bg-background-dark/90 rounded-full flex items-center justify-center text-primary shadow-lg hover:bg-primary hover:text-white transition-all transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
+                                                className="absolute top-4 right-4 size-10 bg-white/90 rounded-full flex items-center justify-center text-primary shadow-lg hover:bg-primary hover:text-white transition-all transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
                                             >
                                                 <Trash2 className="size-5" />
                                             </button>
@@ -270,8 +270,8 @@ const Cart: React.FC = () => {
                                 ))}
                             </div>
                         ) : (
-                            <div className="py-20 flex flex-col items-center justify-center text-center gap-6 bg-white dark:bg-[#26221d] rounded-2xl border border-dashed border-[#e1ddd5] dark:border-[#3a352e] animate-in fade-in duration-500">
-                                <div className="size-20 bg-[#f0eeea] dark:bg-[#2d2a25] rounded-full flex items-center justify-center">
+                            <div className="py-20 flex flex-col items-center justify-center text-center gap-6 bg-white rounded-2xl border border-dashed border-[#e1ddd5] animate-in fade-in duration-500">
+                                <div className="size-20 bg-[#f0eeea] rounded-full flex items-center justify-center">
                                     <Heart className="size-10 text-[#86775f]/50" />
                                 </div>
                                 <div className="max-w-md">
@@ -294,20 +294,20 @@ const Cart: React.FC = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                             {recommended.map((item) => (
                                 <div key={item.id} className="flex flex-col gap-4 group">
-                                    <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-[#e1ddd5] dark:border-white/5 shadow-sm transition-all group-hover:shadow-xl group-hover:border-primary/20">
+                                    <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-[#e1ddd5] shadow-sm transition-all group-hover:shadow-xl group-hover:border-primary/20">
                                         <div
                                             className="absolute inset-0 bg-center bg-cover transition-transform duration-700 group-hover:scale-110"
                                             style={{ backgroundImage: `url("${item.image}")` }}
                                         ></div>
                                         <button
                                             onClick={() => addToCart({ ...item, quantity: 1 })}
-                                            className="absolute bottom-6 right-6 bg-white/95 dark:bg-background-dark/95 p-3 rounded-full shadow-2xl translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 active:scale-95"
+                                            className="absolute bottom-6 right-6 bg-white/95 p-3 rounded-full shadow-2xl translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 active:scale-95"
                                         >
                                             <ShoppingCart className="text-primary size-6" />
                                         </button>
                                         <button
                                             onClick={() => handleWishlistToggle(item)}
-                                            className={`absolute top-4 right-4 p-2 rounded-full shadow-md transition-all duration-300 ${isInWishlist(item.id) ? 'bg-primary text-white scale-110 opacity-100' : 'bg-white/80 dark:bg-background-dark/80 text-charcoal dark:text-white opacity-0 group-hover:opacity-100'}`}
+                                            className={`absolute top-4 right-4 p-2 rounded-full shadow-md transition-all duration-300 ${isInWishlist(item.id) ? 'bg-primary text-white scale-110 opacity-100' : 'bg-white/80 text-charcoal opacity-0 group-hover:opacity-100'}`}
                                         >
                                             <Heart className={`size-4 ${isInWishlist(item.id) ? 'fill-current' : ''}`} />
                                         </button>
@@ -316,7 +316,7 @@ const Cart: React.FC = () => {
                                         </div>
                                     </div>
                                     <div>
-                                        <p className="font-black text-lg text-charcoal dark:text-[#fbfaf9] group-hover:text-primary transition-colors">{item.name}</p>
+                                        <p className="font-black text-lg text-charcoal group-hover:text-primary transition-colors">{item.name}</p>
                                         <p className="text-sm text-[#86775f] font-bold">${item.price.toLocaleString()}</p>
                                     </div>
                                 </div>
@@ -325,25 +325,25 @@ const Cart: React.FC = () => {
                     </section>
 
                     {/* Luxury Reassurance Footer */}
-                    <div className="mt-24 mb-24 py-20 px-10 rounded-3xl bg-white dark:bg-[#1d1a15] border border-[#e1ddd5] dark:border-[#3a352e] flex flex-col md:flex-row justify-between items-center gap-12 text-[#86775f] shadow-sm relative overflow-hidden">
+                    <div className="mt-24 mb-24 py-20 px-10 rounded-3xl bg-white border border-[#e1ddd5] flex flex-col md:flex-row justify-between items-center gap-12 text-[#86775f] shadow-sm relative overflow-hidden">
                         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent opacity-50"></div>
                         <div className="flex flex-col items-center gap-4 text-center group">
                             <div className="size-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-500">
                                 <ShieldCheck className="size-8 text-primary group-hover:text-inherit" />
                             </div>
-                            <span className="text-xs font-bold uppercase tracking-[0.2em] text-charcoal dark:text-white">Lifetime Warranty on Artisanship</span>
+                            <span className="text-xs font-bold uppercase tracking-[0.2em] text-charcoal">Lifetime Warranty on Artisanship</span>
                         </div>
                         <div className="flex flex-col items-center gap-4 text-center group">
                             <div className="size-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-500">
                                 <Truck className="size-8 text-primary group-hover:text-inherit" />
                             </div>
-                            <span className="text-xs font-bold uppercase tracking-[0.2em] text-charcoal dark:text-white">Global White-Glove Logistics</span>
+                            <span className="text-xs font-bold uppercase tracking-[0.2em] text-charcoal">Global White-Glove Logistics</span>
                         </div>
                         <div className="flex flex-col items-center gap-4 text-center group">
                             <div className="size-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-500">
                                 <Headphones className="size-8 text-primary group-hover:text-inherit" />
                             </div>
-                            <span className="text-xs font-bold uppercase tracking-[0.2em] text-charcoal dark:text-white">24/7 Design Concierge Access</span>
+                            <span className="text-xs font-bold uppercase tracking-[0.2em] text-charcoal">24/7 Design Concierge Access</span>
                         </div>
                     </div>
 

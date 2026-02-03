@@ -47,12 +47,12 @@ const steps = [
 
 const InteriorDesign: React.FC = () => {
     return (
-        <div className="bg-background-light dark:bg-background-dark font-display text-charcoal dark:text-white transition-colors duration-300">
+        <div className="bg-background-light font-display text-charcoal transition-colors duration-300">
             <main className="max-w-[1440px] mx-auto px-4 py-8">
                 {/* Hero Section */}
                 {/* Hero Section */}
                 <section className="mb-20">
-                    <div className="relative w-full min-h-[80vh] flex items-center justify-center rounded-[3rem] overflow-hidden shadow-2xl border border-[#e1ddd5] dark:border-[#322e28]">
+                    <div className="relative w-full min-h-[80vh] flex items-center justify-center rounded-[3rem] overflow-hidden shadow-2xl border border-[#e1ddd5]">
                         {/* Background Image */}
                         <div
                             className="absolute inset-0 bg-cover bg-center"
@@ -87,12 +87,12 @@ const InteriorDesign: React.FC = () => {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                         {services.map((service, index) => (
-                            <div key={index} className="group bg-white dark:bg-[#25211c] p-10 rounded-3xl shadow-sm hover:shadow-2xl transition-all border border-[#e1ddd5] dark:border-[#322e28] hover:border-primary/50 flex flex-col items-center text-center">
+                            <div key={index} className="group bg-white p-10 rounded-3xl shadow-sm hover:shadow-2xl transition-all border border-[#e1ddd5] hover:border-primary/50 flex flex-col items-center text-center">
                                 <div className="w-20 h-20 bg-primary/10 flex items-center justify-center rounded-2xl mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-all transform group-hover:rotate-6">
                                     <service.icon className="size-10" />
                                 </div>
-                                <h3 className="text-2xl font-black mb-4 text-[#181511] dark:text-white">{service.title}</h3>
-                                <p className="text-[#86775f] dark:text-gray-400 mb-8 leading-relaxed text-lg">{service.description}</p>
+                                <h3 className="text-2xl font-black mb-4 text-[#181511]">{service.title}</h3>
+                                <p className="text-[#86775f] mb-8 leading-relaxed text-lg">{service.description}</p>
                                 <div
                                     className="w-full h-64 rounded-2xl bg-cover bg-center transition-transform duration-500 group-hover:scale-[1.02]"
                                     style={{ backgroundImage: `url('${service.image}')` }}
@@ -110,15 +110,15 @@ const InteriorDesign: React.FC = () => {
                     </div>
                     <div className="relative">
                         {/* Timeline connector line */}
-                        <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-[#f0eeea] dark:bg-[#33312d] -z-10"></div>
+                        <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-[#f0eeea] -z-10"></div>
                         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
                             {steps.map((step) => (
                                 <div key={step.number} className="flex flex-col items-center text-center">
                                     <div className="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center font-bold text-2xl mb-6 shadow-lg shadow-primary/30 transform -rotate-3 group-hover:rotate-0 transition-transform">
                                         {step.number}
                                     </div>
-                                    <h4 className="text-xl font-black mb-3 text-[#181511] dark:text-white">{step.title}</h4>
-                                    <p className="text-[#86775f] dark:text-gray-400 text-base leading-relaxed">{step.description}</p>
+                                    <h4 className="text-xl font-black mb-3 text-[#181511]">{step.title}</h4>
+                                    <p className="text-[#86775f] text-base leading-relaxed">{step.description}</p>
                                 </div>
                             ))}
                         </div>
