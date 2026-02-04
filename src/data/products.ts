@@ -21,6 +21,7 @@ export interface Product {
 }
 
 export const products: Product[] = [
+    // --- LIVING ROOM ---
     {
         id: 'coll-1',
         name: 'Aurelius Velvet Sofa',
@@ -41,6 +42,88 @@ export const products: Product[] = [
         inStock: true
     },
     {
+        id: 'feat-1',
+        name: 'Aurum Velvet Sofa',
+        category: 'Living Room',
+        price: 2450,
+        image: 'https://images.unsplash.com/photo-1550254478-ead40cc54513?auto=format&fit=crop&q=80&w=800',
+        images: ['https://images.unsplash.com/photo-1550254478-ead40cc54513?auto=format&fit=crop&q=80&w=800'],
+        description: 'A masterpiece of comfort and style. The Aurum Velvet Sofa features deep seating and plush cushions upholstered in premium velvet.',
+        rating: 4.9,
+        reviewCount: 95,
+        specs: { length: '90"', depth: '38"', height: '34"' },
+        inStock: true
+    },
+    {
+        id: 'coll-7',
+        name: 'Elysian Accent Chair',
+        category: 'Living Room',
+        price: 899,
+        image: 'https://i5.walmartimages.com/seo/YODOLLA-Fabric-Accent-Chair-Mid-Century-Modern-Upholstered-Arm-Chair-for-Living-Room-in-White_183bcb22-4ed9-4957-8171-63936cd5e78b.e1d3741dd368a0abf0a980db265a24b4.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF',
+        images: ['https://i5.walmartimages.com/seo/YODOLLA-Fabric-Accent-Chair-Mid-Century-Modern-Upholstered-Arm-Chair-for-Living-Room-in-White_183bcb22-4ed9-4957-8171-63936cd5e78b.e1d3741dd368a0abf0a980db265a24b4.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF'],
+        description: 'A statement piece for any corner. The Elysian Chair combines bold curves with exceptional comfort.',
+        rating: 4.7,
+        reviewCount: 15,
+        specs: { length: '30"', depth: '32"', height: '38"' },
+        inStock: true
+    },
+    {
+        id: 'coll-16',
+        name: 'Orion Velvet Ottoman',
+        category: 'Living Room',
+        price: 450,
+        image: 'https://images.unsplash.com/photo-1503602642458-2321114458ed?auto=format&fit=crop&q=80&w=1000',
+        images: ['https://images.unsplash.com/photo-1503602642458-2321114458ed?auto=format&fit=crop&q=80&w=1000'],
+        description: 'Versatile and plush. The Orion Ottoman works as extra seating, a footrest, or even a coffee table with a tray.',
+        rating: 4.7,
+        reviewCount: 45,
+        specs: { length: '24"', depth: '24"', height: '18"' },
+        inStock: true
+    },
+    {
+        id: 'coll-8',
+        name: 'Vanguard Coffee Table',
+        category: 'Living Room',
+        price: 1200,
+        badge: 'Trending',
+        badgeColor: 'bg-primary',
+        image: 'https://cdn.decorpad.com/photos/2025/09/01/m_White-Boucle-Chairs.jpg',
+        images: ['https://cdn.decorpad.com/photos/2025/09/01/m_White-Boucle-Chairs.jpg'],
+        description: 'Modern lines meet sculptural form. The Vanguard Coffee Table is a centerpiece for the contemporary home.',
+        rating: 4.5,
+        reviewCount: 55,
+        specs: { length: '48"', depth: '24"', height: '18"' },
+        inStock: true
+    },
+    {
+        id: 'feat-4',
+        name: 'Oka Lounge Chair',
+        category: 'Living Room',
+        price: 950,
+        image: 'https://images.unsplash.com/photo-1598191950976-503a07409249?auto=format&fit=crop&q=80&w=800',
+        images: ['https://images.unsplash.com/photo-1598191950976-503a07409249?auto=format&fit=crop&q=80&w=800'],
+        description: 'Sustainable design meets ultimate relaxation. The Oka Lounge Chair is crafted with reclaimed wood and organic linen.',
+        rating: 4.7,
+        reviewCount: 38,
+        specs: { length: '28"', depth: '30"', height: '32"' },
+        inStock: true
+    },
+    {
+        id: 'bs-1',
+        name: 'Aurelius Lounge Chair',
+        category: 'Living Room',
+        price: 1250,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDqOSAJPrXt4nRouPYJgaCXupCO0xB5PqU3lrCKBhhXyM_LNVohMuOfthW5C02nPKwOoBOGTo9rEJuM5XPX4AhynPf5amLf4r9-YEHzxvXPF5r4v8aFMttyrMuNjA3Z-pwpMFa4jd7SkKFrcNQ1WULIweh2GTQcE-1zs333-FT4c3oJgFqEfG6sNpXAtSOWynhCYDOMMtPlbkwj9m3OxD7Mgz6OyQPVCgUCNu_Ov4eanK1VZ_FR2j3SEpz2tbG0o7D9aOSduxrfUtGV',
+        images: ['https://lh3.googleusercontent.com/aida-public/AB6AXuDqOSAJPrXt4nRouPYJgaCXupCO0xB5PqU3lrCKBhhXyM_LNVohMuOfthW5C02nPKwOoBOGTo9rEJuM5XPX4AhynPf5amLf4r9-YEHzxvXPF5r4v8aFMttyrMuNjA3Z-pwpMFa4jd7SkKFrcNQ1WULIweh2GTQcE-1zs333-FT4c3oJgFqEfG6sNpXAtSOWynhCYDOMMtPlbkwj9m3OxD7Mgz6OyQPVCgUCNu_Ov4eanK1VZ_FR2j3SEpz2tbG0o7D9aOSduxrfUtGV'],
+        description: 'Relax in style with the Aurelius Lounge Chair. Premium leather meets modern design.',
+        rating: 4.9,
+        reviewCount: 45,
+        specs: { length: '30"', depth: '32"', height: '35"' },
+        inStock: true
+    },
+
+    // --- DINING ---
+    {
         id: 'coll-2',
         name: 'Nordic Oak Dining Set',
         category: 'Dining',
@@ -53,6 +136,75 @@ export const products: Product[] = [
         specs: { length: '72"', depth: '36"', height: '30"' },
         inStock: true
     },
+    {
+        id: 'coll-14',
+        name: 'Aria Marble Dining Table',
+        category: 'Dining',
+        price: 3200,
+        image: 'https://images.unsplash.com/photo-1554295405-abb8fd54f153?auto=format&fit=crop&q=80&w=1000',
+        images: ['https://images.unsplash.com/photo-1554295405-abb8fd54f153?auto=format&fit=crop&q=80&w=1000'],
+        description: 'A centerpiece of luxury. The Aria Table features a single slab of white Carrara marble atop a sculptural base.',
+        rating: 4.9,
+        reviewCount: 31,
+        specs: { length: '84"', depth: '42"', height: '30"' },
+        inStock: true
+    },
+    {
+        id: 'feat-2',
+        name: 'Marble Haven Table',
+        category: 'Dining',
+        price: 1890,
+        image: 'https://images.unsplash.com/photo-1577146333355-630f92523255?auto=format&fit=crop&q=80&w=800',
+        images: ['https://images.unsplash.com/photo-1577146333355-630f92523255?auto=format&fit=crop&q=80&w=800'],
+        description: 'Dine in elegance. The Marble Haven Table features a solid marble top supported by an architectural bronze base.',
+        rating: 4.8,
+        reviewCount: 64,
+        specs: { length: '72"', depth: '36"', height: '30"' },
+        inStock: true
+    },
+    {
+        id: 'bs-2',
+        name: 'Nexus Walnut Table',
+        category: 'Dining',
+        price: 890,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAcuRPHe0KyK6EkhkXip4Wyxh9j9N57h_Hnseo0Nn5otHTeATEGTE6v6C1V5gLGEVs9ew-WV0MsvEo5XwJGU691soAYssNMHpdhePr7mN3ly9am86g4_6NYqwpIYBBAXKt8vVjRBW1R88yKyqb-jkRUdkmvuzaPewsKC4KhWiBWnmkn6Kw6RsFFKP63ubz3z3SlBVzwCNWMuUpH_6l2xKdWT-NWxAdAjWw_YwFvlr9d-ipqGGyyBJBSrQYnLCLbdPMTT24DEvyyLB1I',
+        images: ['https://lh3.googleusercontent.com/aida-public/AB6AXuAcuRPHe0KyK6EkhkXip4Wyxh9j9N57h_Hnseo0Nn5otHTeATEGTE6v6C1V5gLGEVs9ew-WV0MsvEo5XwJGU691soAYssNMHpdhePr7mN3ly9am86g4_6NYqwpIYBBAXKt8vVjRBW1R88yKyqb-jkRUdkmvuzaPewsKC4KhWiBWnmkn6Kw6RsFFKP63ubz3z3SlBVzwCNWMuUpH_6l2xKdWT-NWxAdAjWw_YwFvlr9d-ipqGGyyBJBSrQYnLCLbdPMTT24DEvyyLB1I'],
+        description: 'The Nexus Table features a unique geometric base and smooth walnut finish.',
+        rating: 4.7,
+        reviewCount: 32,
+        specs: { length: '48"', depth: '48"', height: '30"' },
+        inStock: true
+    },
+
+    // --- BEDROOM ---
+    {
+        id: 'coll-5',
+        name: 'Cloud Upholstered Bed',
+        category: 'Bedroom',
+        price: 2200,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDKHqJ3-8NiMOoaePVsCXIK82G8gM02mqLnYg2Ip3ROYSZ-8gQC4cuyynb-Y7S4gVOrQsQSR5wZ-FFaeO130IhW1nHMlaj6mJfLtDDmRrRNVgOk-LOlF7Kw3x4_S9ohtzndRhtRR6ChETf69wS6ouWNs1Qq7yyw1CQEd7rQAS_aJ7LfNF_pMVOCpTB-UKsbZ42XMthrrtbX9j91tOIPPzhv4_s17dhrEAwmmDUKrOAttRlzNv4PxIcJo1Bqefy174RgPqLCR',
+        images: ['https://lh3.googleusercontent.com/aida-public/AB6AXuDKHqJ3-8NiMOoaePVsCXIK82G8gM02mqLnYg2Ip3ROYSZ-8gQC4cuyynb-Y7S4gVOrQsQSR5wZ-FFaeO130IhW1nHMlaj6mJfLtDDmRrRNVgOk-LOlF7Kw3x4_S9ohtzndRhtRR6ChETf69wS6ouWNs1Qq7yyw1CQEd7rQAS_aJ7LfNF_pMVOCpTB-UKsbZ42XMthrrtbX9j91tOIPPzhv4_s17dhrEAwmmDUKrOAttRlzNv4PxIcJo1Bqefy174RgPqLCR'],
+        description: 'Dream in luxury with the Cloud Bed. Its plush upholstered headboard and sturdy frame provide the perfect foundation for a restful night.',
+        rating: 4.8,
+        reviewCount: 92,
+        specs: { length: '85"', depth: '65"', height: '50"' },
+        inStock: true
+    },
+    {
+        id: 'feat-3',
+        name: 'Elysian Canopy Bed',
+        category: 'Bedroom',
+        price: 3100,
+        image: 'https://images.unsplash.com/photo-1505693415958-4d5ec60c1505?auto=format&fit=crop&q=80&w=800',
+        images: ['https://images.unsplash.com/photo-1505693415958-4d5ec60c1505?auto=format&fit=crop&q=80&w=800'],
+        description: 'The ultimate sanctuary. The Elysian Canopy Bed features a minimal steel frame and a plush, integrated headboard.',
+        rating: 5.0,
+        reviewCount: 42,
+        specs: { length: '86"', depth: '66"', height: '80"' },
+        inStock: true
+    },
+
+    // --- OFFICE ---
     {
         id: 'coll-3',
         name: 'Eames Inspired Executive',
@@ -70,31 +222,20 @@ export const products: Product[] = [
         inStock: true
     },
     {
-        id: 'coll-4',
-        name: 'Harlow Walnut Sideboard',
-        category: 'Storage',
-        price: 1599,
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDw7Y2cYFqPLQniaAsRE9JdWR4BNv9PBJKVMU48sLCVRBcGkhnWFJJSMpjuGalhbpApkiZTES1AXCpGbGr86njHHXhpXKarO1a2JsBgbLjBhJ-CeJYNXVk7EUFc26Na7gWB2yPZ9vPdTkT7J_H4knsKsCjb_THa7gAdJnY0ErNSEzU7SN5mzLGVBC7axC6KjZPleyqQ304Asv7cgJUPw908aBHLx79YsN0AvT9fdewBmZsecWcYSst6J_VpScohrOh_c8s47dJ4yNUa',
-        images: ['https://lh3.googleusercontent.com/aida-public/AB6AXuDw7Y2cYFqPLQniaAsRE9JdWR4BNv9PBJKVMU48sLCVRBcGkhnWFJJSMpjuGalhbpApkiZTES1AXCpGbGr86njHHXhpXKarO1a2JsBgbLjBhJ-CeJYNXVk7EUFc26Na7gWB2yPZ9vPdTkT7J_H4knsKsCjb_THa7gAdJnY0ErNSEzU7SN5mzLGVBC7axC6KjZPleyqQ304Asv7cgJUPw908aBHLx79YsN0AvT9fdewBmZsecWcYSst6J_VpScohrOh_c8s47dJ4yNUa'],
-        description: 'Store in style with the Harlow Sideboard. Rich walnut veneer meets brushed brass hardware for a sophisticated storage solution.',
-        rating: 4.9,
-        reviewCount: 36,
-        specs: { length: '60"', depth: '18"', height: '34"' },
+        id: 'coll-12',
+        name: 'Meridian Bookshelf',
+        category: 'Office',
+        price: 1100,
+        image: 'https://images.unsplash.com/photo-1595515106967-1b072c49ee61?auto=format&fit=crop&q=80&w=1000',
+        images: ['https://images.unsplash.com/photo-1595515106967-1b072c49ee61?auto=format&fit=crop&q=80&w=1000'],
+        description: 'Display your library in style. The Meridian Bookshelf offers ample storage with a chic, asymmetrical design.',
+        rating: 4.6,
+        reviewCount: 19,
+        specs: { length: '36"', depth: '14"', height: '72"' },
         inStock: true
     },
-    {
-        id: 'coll-5',
-        name: 'Cloud Upholstered Bed',
-        category: 'Bedroom',
-        price: 2200,
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDKHqJ3-8NiMOoaePVsCXIK82G8gM02mqLnYg2Ip3ROYSZ-8gQC4cuyynb-Y7S4gVOrQsQSR5wZ-FFaeO130IhW1nHMlaj6mJfLtDDmRrRNVgOk-LOlF7Kw3x4_S9ohtzndRhtRR6ChETf69wS6ouWNs1Qq7yyw1CQEd7rQAS_aJ7LfNF_pMVOCpTB-UKsbZ42XMthrrtbX9j91tOIPPzhv4_s17dhrEAwmmDUKrOAttRlzNv4PxIcJo1Bqefy174RgPqLCR',
-        images: ['https://lh3.googleusercontent.com/aida-public/AB6AXuDKHqJ3-8NiMOoaePVsCXIK82G8gM02mqLnYg2Ip3ROYSZ-8gQC4cuyynb-Y7S4gVOrQsQSR5wZ-FFaeO130IhW1nHMlaj6mJfLtDDmRrRNVgOk-LOlF7Kw3x4_S9ohtzndRhtRR6ChETf69wS6ouWNs1Qq7yyw1CQEd7rQAS_aJ7LfNF_pMVOCpTB-UKsbZ42XMthrrtbX9j91tOIPPzhv4_s17dhrEAwmmDUKrOAttRlzNv4PxIcJo1Bqefy174RgPqLCR'],
-        description: 'Dream in luxury with the Cloud Bed. Its plush upholstered headboard and sturdy frame provide the perfect foundation for a restful night.',
-        rating: 4.8,
-        reviewCount: 92,
-        specs: { length: '85"', depth: '65"', height: '50"' },
-        inStock: true
-    },
+
+    // --- LIGHTING ---
     {
         id: 'coll-6',
         name: 'Luna Marble Floor Lamp',
@@ -106,34 +247,6 @@ export const products: Product[] = [
         rating: 4.6,
         reviewCount: 29,
         specs: { length: '12"', depth: '12"', height: '60"' },
-        inStock: true
-    },
-    {
-        id: 'coll-7',
-        name: 'Elysian Accent Chair',
-        category: 'Living Room',
-        price: 899,
-        image: 'https://images.unsplash.com/photo-1580480055273-228fff39a957?auto=format&fit=crop&q=80&w=1000',
-        images: ['https://images.unsplash.com/photo-1580480055273-228fff39a957?auto=format&fit=crop&q=80&w=1000'],
-        description: 'A statement piece for any corner. The Elysian Chair combines bold curves with exceptional comfort.',
-        rating: 4.7,
-        reviewCount: 15,
-        specs: { length: '30"', depth: '32"', height: '38"' },
-        inStock: true
-    },
-    {
-        id: 'coll-8',
-        name: 'Vanguard Coffee Table',
-        category: 'Living Room',
-        price: 1200,
-        badge: 'Trending',
-        badgeColor: 'bg-primary',
-        image: 'https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&q=80&w=1000',
-        images: ['https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&q=80&w=1000'],
-        description: 'Modern lines meet industrial durability. The Vanguard Coffee Table features a concrete top and a black steel base.',
-        rating: 4.5,
-        reviewCount: 55,
-        specs: { length: '48"', depth: '24"', height: '18"' },
         inStock: true
     },
     {
@@ -150,6 +263,34 @@ export const products: Product[] = [
         rating: 5.0,
         reviewCount: 12,
         specs: { length: '30"', depth: '30"', height: '40"' },
+        inStock: true
+    },
+    {
+        id: 'bs-4',
+        name: 'Ethereal Pendant',
+        category: 'Lighting',
+        price: 520,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBygEp7Rv7dQnNXwoYAXdp_QPuDVq_G9F_-vMYa4B7RR7KcJWnLTPduIA-kyZQ0edt6WmgSV4hNPzRO45GvGVnQfXgPV7yPTaJ5I2JCtSIXMn9EDowculSu_kOzRZeZQZrzg3W2ZK64Pec56FlahoZSHuTeTmHOuMAJXqPad-jytWyEJx40uDt9RbecgIvwnHImb-5RJNBWpZp3r26ZV8gXDxZFv-hWO1ID4QZCZEUmXgW97lbQDiBl4ItcN3DSoOQmj11lDhOMBAJa',
+        images: ['https://lh3.googleusercontent.com/aida-public/AB6AXuBygEp7Rv7dQnNXwoYAXdp_QPuDVq_G9F_-vMYa4B7RR7KcJWnLTPduIA-kyZQ0edt6WmgSV4hNPzRO45GvGVnQfXgPV7yPTaJ5I2JCtSIXMn9EDowculSu_kOzRZeZQZrzg3W2ZK64Pec56FlahoZSHuTeTmHOuMAJXqPad-jytWyEJx40uDt9RbecgIvwnHImb-5RJNBWpZp3r26ZV8gXDxZFv-hWO1ID4QZCZEUmXgW97lbQDiBl4ItcN3DSoOQmj11lDhOMBAJa'],
+        description: 'Soft lighting for a relaxing atmosphere. The Ethereal Pendant floats effortlessly in any room.',
+        rating: 4.6,
+        reviewCount: 39,
+        specs: { length: '14"', depth: '14"', height: '18"' },
+        inStock: true
+    },
+
+    // --- DECOR & OTHER ---
+    {
+        id: 'coll-4',
+        name: 'Harlow Walnut Sideboard',
+        category: 'Storage',
+        price: 1599,
+        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDw7Y2cYFqPLQniaAsRE9JdWR4BNv9PBJKVMU48sLCVRBcGkhnWFJJSMpjuGalhbpApkiZTES1AXCpGbGr86njHHXhpXKarO1a2JsBgbLjBhJ-CeJYNXVk7EUFc26Na7gWB2yPZ9vPdTkT7J_H4knsKsCjb_THa7gAdJnY0ErNSEzU7SN5mzLGVBC7axC6KjZPleyqQ304Asv7cgJUPw908aBHLx79YsN0AvT9fdewBmZsecWcYSst6J_VpScohrOh_c8s47dJ4yNUa',
+        images: ['https://lh3.googleusercontent.com/aida-public/AB6AXuDw7Y2cYFqPLQniaAsRE9JdWR4BNv9PBJKVMU48sLCVRBcGkhnWFJJSMpjuGalhbpApkiZTES1AXCpGbGr86njHHXhpXKarO1a2JsBgbLjBhJ-CeJYNXVk7EUFc26Na7gWB2yPZ9vPdTkT7J_H4knsKsCjb_THa7gAdJnY0ErNSEzU7SN5mzLGVBC7axC6KjZPleyqQ304Asv7cgJUPw908aBHLx79YsN0AvT9fdewBmZsecWcYSst6J_VpScohrOh_c8s47dJ4yNUa'],
+        description: 'Store in style with the Harlow Sideboard. Rich walnut veneer meets brushed brass hardware for a sophisticated storage solution.',
+        rating: 4.9,
+        reviewCount: 36,
+        specs: { length: '60"', depth: '18"', height: '34"' },
         inStock: true
     },
     {
@@ -179,19 +320,6 @@ export const products: Product[] = [
         inStock: true
     },
     {
-        id: 'coll-12',
-        name: 'Meridian Bookshelf',
-        category: 'Office',
-        price: 1100,
-        image: 'https://images.unsplash.com/photo-1595515106967-1b072c49ee61?auto=format&fit=crop&q=80&w=1000',
-        images: ['https://images.unsplash.com/photo-1595515106967-1b072c49ee61?auto=format&fit=crop&q=80&w=1000'],
-        description: 'Display your library in style. The Meridian Bookshelf offers ample storage with a chic, asymmetrical design.',
-        rating: 4.6,
-        reviewCount: 19,
-        specs: { length: '36"', depth: '14"', height: '72"' },
-        inStock: true
-    },
-    {
         id: 'coll-13',
         name: 'Solis Outdoor Lounge',
         category: 'Outdoor',
@@ -206,19 +334,6 @@ export const products: Product[] = [
         inStock: true
     },
     {
-        id: 'coll-14',
-        name: 'Aria Marble Dining Table',
-        category: 'Dining',
-        price: 3200,
-        image: 'https://images.unsplash.com/photo-1554295405-abb8fd54f153?auto=format&fit=crop&q=80&w=1000',
-        images: ['https://images.unsplash.com/photo-1554295405-abb8fd54f153?auto=format&fit=crop&q=80&w=1000'],
-        description: 'A centerpiece of luxury. The Aria Table features a single slab of white Carrara marble atop a sculptural base.',
-        rating: 4.9,
-        reviewCount: 31,
-        specs: { length: '84"', depth: '42"', height: '30"' },
-        inStock: true
-    },
-    {
         id: 'coll-15',
         name: 'Zephyr Art Print',
         category: 'Decor',
@@ -229,19 +344,6 @@ export const products: Product[] = [
         rating: 4.5,
         reviewCount: 67,
         specs: { length: '24"', depth: '1"', height: '36"' },
-        inStock: true
-    },
-    {
-        id: 'coll-16',
-        name: 'Orion Velvet Ottoman',
-        category: 'Living Room',
-        price: 450,
-        image: 'https://images.unsplash.com/photo-1503602642458-2321114458ed?auto=format&fit=crop&q=80&w=1000',
-        images: ['https://images.unsplash.com/photo-1503602642458-2321114458ed?auto=format&fit=crop&q=80&w=1000'],
-        description: 'Versatile and plush. The Orion Ottoman works as extra seating, a footrest, or even a coffee table with a tray.',
-        rating: 4.7,
-        reviewCount: 45,
-        specs: { length: '24"', depth: '24"', height: '18"' },
         inStock: true
     },
     {
@@ -271,32 +373,6 @@ export const products: Product[] = [
         inStock: true
     },
     {
-        id: 'bs-1',
-        name: 'Aurelius Lounge Chair',
-        category: 'Living Room',
-        price: 1250,
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDqOSAJPrXt4nRouPYJgaCXupCO0xB5PqU3lrCKBhhXyM_LNVohMuOfthW5C02nPKwOoBOGTo9rEJuM5XPX4AhynPf5amLf4r9-YEHzxvXPF5r4v8aFMttyrMuNjA3Z-pwpMFa4jd7SkKFrcNQ1WULIweh2GTQcE-1zs333-FT4c3oJgFqEfG6sNpXAtSOWynhCYDOMMtPlbkwj9m3OxD7Mgz6OyQPVCgUCNu_Ov4eanK1VZ_FR2j3SEpz2tbG0o7D9aOSduxrfUtGV',
-        images: ['https://lh3.googleusercontent.com/aida-public/AB6AXuDqOSAJPrXt4nRouPYJgaCXupCO0xB5PqU3lrCKBhhXyM_LNVohMuOfthW5C02nPKwOoBOGTo9rEJuM5XPX4AhynPf5amLf4r9-YEHzxvXPF5r4v8aFMttyrMuNjA3Z-pwpMFa4jd7SkKFrcNQ1WULIweh2GTQcE-1zs333-FT4c3oJgFqEfG6sNpXAtSOWynhCYDOMMtPlbkwj9m3OxD7Mgz6OyQPVCgUCNu_Ov4eanK1VZ_FR2j3SEpz2tbG0o7D9aOSduxrfUtGV'],
-        description: 'Relax in style with the Aurelius Lounge Chair. Premium leather meets modern design.',
-        rating: 4.9,
-        reviewCount: 45,
-        specs: { length: '30"', depth: '32"', height: '35"' },
-        inStock: true
-    },
-    {
-        id: 'bs-2',
-        name: 'Nexus Walnut Table',
-        category: 'Dining',
-        price: 890,
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAcuRPHe0KyK6EkhkXip4Wyxh9j9N57h_Hnseo0Nn5otHTeATEGTE6v6C1V5gLGEVs9ew-WV0MsvEo5XwJGU691soAYssNMHpdhePr7mN3ly9am86g4_6NYqwpIYBBAXKt8vVjRBW1R88yKyqb-jkRUdkmvuzaPewsKC4KhWiBWnmkn6Kw6RsFFKP63ubz3z3SlBVzwCNWMuUpH_6l2xKdWT-NWxAdAjWw_YwFvlr9d-ipqGGyyBJBSrQYnLCLbdPMTT24DEvyyLB1I',
-        images: ['https://lh3.googleusercontent.com/aida-public/AB6AXuAcuRPHe0KyK6EkhkXip4Wyxh9j9N57h_Hnseo0Nn5otHTeATEGTE6v6C1V5gLGEVs9ew-WV0MsvEo5XwJGU691soAYssNMHpdhePr7mN3ly9am86g4_6NYqwpIYBBAXKt8vVjRBW1R88yKyqb-jkRUdkmvuzaPewsKC4KhWiBWnmkn6Kw6RsFFKP63ubz3z3SlBVzwCNWMuUpH_6l2xKdWT-NWxAdAjWw_YwFvlr9d-ipqGGyyBJBSrQYnLCLbdPMTT24DEvyyLB1I'],
-        description: 'The Nexus Table features a unique geometric base and smooth walnut finish.',
-        rating: 4.7,
-        reviewCount: 32,
-        specs: { length: '48"', depth: '48"', height: '30"' },
-        inStock: true
-    },
-    {
         id: 'bs-3',
         name: 'Opaline Ceramic Set',
         category: 'Decor',
@@ -307,19 +383,6 @@ export const products: Product[] = [
         rating: 4.8,
         reviewCount: 28,
         specs: { length: 'Varies', depth: 'Varies', height: 'Varies' },
-        inStock: true
-    },
-    {
-        id: 'bs-4',
-        name: 'Ethereal Pendant',
-        category: 'Lighting',
-        price: 520,
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBygEp7Rv7dQnNXwoYAXdp_QPuDVq_G9F_-vMYa4B7RR7KcJWnLTPduIA-kyZQ0edt6WmgSV4hNPzRO45GvGVnQfXgPV7yPTaJ5I2JCtSIXMn9EDowculSu_kOzRZeZQZrzg3W2ZK64Pec56FlahoZSHuTeTmHOuMAJXqPad-jytWyEJx40uDt9RbecgIvwnHImb-5RJNBWpZp3r26ZV8gXDxZFv-hWO1ID4QZCZEUmXgW97lbQDiBl4ItcN3DSoOQmj11lDhOMBAJa',
-        images: ['https://lh3.googleusercontent.com/aida-public/AB6AXuBygEp7Rv7dQnNXwoYAXdp_QPuDVq_G9F_-vMYa4B7RR7KcJWnLTPduIA-kyZQ0edt6WmgSV4hNPzRO45GvGVnQfXgPV7yPTaJ5I2JCtSIXMn9EDowculSu_kOzRZeZQZrzg3W2ZK64Pec56FlahoZSHuTeTmHOuMAJXqPad-jytWyEJx40uDt9RbecgIvwnHImb-5RJNBWpZp3r26ZV8gXDxZFv-hWO1ID4QZCZEUmXgW97lbQDiBl4ItcN3DSoOQmj11lDhOMBAJa'],
-        description: 'Soft lighting for a relaxing atmosphere. The Ethereal Pendant floats effortlessly in any room.',
-        rating: 4.6,
-        reviewCount: 39,
-        specs: { length: '14"', depth: '14"', height: '18"' },
         inStock: true
     }
 ];

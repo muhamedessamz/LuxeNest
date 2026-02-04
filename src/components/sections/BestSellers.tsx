@@ -3,35 +3,12 @@ import { Link } from 'react-router-dom';
 import { useWishlist } from '../../context/WishlistContext';
 import { Heart } from 'lucide-react';
 
-const products = [
-    {
-        id: 'bs-1',
-        name: 'Aurelius Lounge Chair',
-        price: 1250,
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDqOSAJPrXt4nRouPYJgaCXupCO0xB5PqU3lrCKBhhXyM_LNVohMuOfthW5C02nPKwOoBOGTo9rEJuM5XPX4AhynPf5amLf4r9-YEHzxvXPF5r4v8aFMttyrMuNjA3Z-pwpMFa4jd7SkKFrcNQ1WULIweh2GTQcE-1zs333-FT4c3oJgFqEfG6sNpXAtSOWynhCYDOMMtPlbkwj9m3OxD7Mgz6OyQPVCgUCNu_Ov4eanK1VZ_FR2j3SEpz2tbG0o7D9aOSduxrfUtGV',
-    },
-    {
-        id: 'bs-2',
-        name: 'Nexus Walnut Table',
-        price: 890,
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAcuRPHe0KyK6EkhkXip4Wyxh9j9N57h_Hnseo0Nn5otHTeATEGTE6v6C1V5gLGEVs9ew-WV0MsvEo5XwJGU691soAYssNMHpdhePr7mN3ly9am86g4_6NYqwpIYBBAXKt8vVjRBW1R88yKyqb-jkRUdkmvuzaPewsKC4KhWiBWnmkn6Kw6RsFFKP63ubz3z3SlBVzwCNWMuUpH_6l2xKdWT-NWxAdAjWw_YwFvlr9d-ipqGGyyBJBSrQYnLCLbdPMTT24DEvyyLB1I',
-    },
-    {
-        id: 'bs-3',
-        name: 'Opaline Ceramic Set',
-        price: 340,
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBb5fDWTpD2JbUFgSRLMjqoZM1bG9CcDrrH25YjI_tgWbW2tEJPHqb24AwtwvohDW553Kpb9iq6l9STVBWnB7nlx2F4aTxZ9Oq7R3B3Nr2ihrkBH-6gu5c5ZxEAGDQ1LAa7JUPHxH4mRFL97O-P3Pz0LHuEbmydnwylEvxd2KUiOm931q5pvrmQbD1bX2SIbfCZ3WUewOfIBzbIPaDUU7N_XXfT3XZBBfJYUIVSsBI8o9ZoaWBDXwoLQ2_bfNhUBjKvJS_dqCM3tKSl',
-    },
-    {
-        id: 'bs-4',
-        name: 'Ethereal Pendant',
-        price: 520,
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBygEp7Rv7dQnNXwoYAXdp_QPuDVq_G9F_-vMYa4B7RR7KcJWnLTPduIA-kyZQ0edt6WmgSV4hNPzRO45GvGVnQfXgPV7yPTaJ5I2JCtSIXMn9EDowculSu_kOzRZeZQZrzg3W2ZK64Pec56FlahoZSHuTeTmHOuMAJXqPad-jytWyEJx40uDt9RbecgIvwnHImb-5RJNBWpZp3r26ZV8gXDxZFv-hWO1ID4QZCZEUmXgW97lbQDiBl4ItcN3DSoOQmj11lDhOMBAJa',
-    },
-];
+import { products } from '../../data/products';
 
 const BestSellers: React.FC = () => {
     const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
+
+    const bestSellers = products.filter(p => p.id.startsWith('bs-'));
 
     const handleWishlistToggle = (e: React.MouseEvent, product: any) => {
         e.preventDefault();
@@ -56,7 +33,7 @@ const BestSellers: React.FC = () => {
                     <p className="text-[#86775f] max-w-2xl text-lg leading-relaxed">Discover the pieces that define modern luxury. Loved by our clients and designed for a lifetime.</p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {products.map((product, index) => (
+                    {bestSellers.map((product, index) => (
                         <Link
                             key={index}
                             to={`/product/${product.id}`}

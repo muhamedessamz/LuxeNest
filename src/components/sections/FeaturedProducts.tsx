@@ -1,43 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ShoppingCart, Star, Eye } from 'lucide-react';
-
-const products = [
-    {
-        id: 1,
-        name: 'Aurum Velvet Sofa',
-        price: '$2,450',
-        rating: 4.9,
-        image: 'https://images.unsplash.com/photo-1550254478-ead40cc54513?auto=format&fit=crop&q=80&w=800',
-        category: 'Living Room',
-    },
-    {
-        id: 2,
-        name: 'Marble Haven Table',
-        price: '$1,890',
-        rating: 4.8,
-        image: 'https://images.unsplash.com/photo-1577146333355-630f92523255?auto=format&fit=crop&q=80&w=800',
-        category: 'Dining',
-    },
-    {
-        id: 3,
-        name: 'Elysian Canopy Bed',
-        price: '$3,100',
-        rating: 5.0,
-        image: 'https://images.unsplash.com/photo-1505693415958-4d5ec60c1505?auto=format&fit=crop&q=80&w=800',
-        category: 'Bedroom',
-    },
-    {
-        id: 4,
-        name: 'Oka Lounge Chair',
-        price: '$950',
-        rating: 4.7,
-        image: 'https://images.unsplash.com/photo-1598191950976-503a07409249?auto=format&fit=crop&q=80&w=800',
-        category: 'New In',
-    },
-];
+import { products } from '../../data/products';
 
 const FeaturedProducts: React.FC = () => {
+    const featuredItems = products.filter(p => p.id.startsWith('feat-'));
+
     return (
         <section className="section-padding bg-white">
             <div className="container-custom">
@@ -47,7 +15,7 @@ const FeaturedProducts: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {products.map((product, index) => (
+                    {featuredItems.map((product, index) => (
                         <motion.div
                             key={product.id}
                             initial={{ opacity: 0, y: 20 }}
@@ -90,7 +58,7 @@ const FeaturedProducts: React.FC = () => {
                                         <span className="text-xs font-bold ml-1">{product.rating}</span>
                                     </div>
                                 </div>
-                                <p className="text-xl font-serif font-bold text-gray-900">{product.price}</p>
+                                <p className="text-xl font-serif font-bold text-gray-900">${product.price.toLocaleString()}</p>
                             </div>
                         </motion.div>
                     ))}

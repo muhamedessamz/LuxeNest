@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, Heart } from 'lucide-react';
-import { ChevronLeft, ChevronRight, Heart } from 'lucide-react';
 import { useWishlist } from '../context/WishlistContext';
 import { products } from '../data/products';
 

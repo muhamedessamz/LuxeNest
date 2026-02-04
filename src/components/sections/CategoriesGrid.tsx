@@ -12,7 +12,7 @@ const categories = [
         image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAetdIdjcbyKzS6tLLcFaz2qk4lgSA1KJ3WlurYvssK-J5cx3H--Zu7EgUz82oN4M99YjHiIXvnWUFEoa8WQ0jyqz_Xwmh43NhlatzL31RSmfeX-cfaTuJ4Lydvcu4d3I0kEGXW0xRQ9XK5fJU3MaaEf8FQy59Z8wCtu1t6qwJunaPf7oCntHSjKHfraM1SSgVY9YRDkYNe7HsYEbBXVj-YWXTK3Ml86D4XG1GckQ875XyxDEWvzYGoXdSH5---IpQwaUBO3j3_a2bZ',
     },
     {
-        title: 'Dining Room',
+        title: 'Dining',
         items: '280+ Items',
         image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuArNEMsIYoP_QkyTsMOVf2aW9demELCZKlls8xvgR0Wvmk2qf_D31ey0dVoE7r_9aYeajChsosJnaGjifgfj_MFVAfdMUdDnKJUC4V6dhU4Dv0f-2SL8EaFGE40zqGOWSM8IUlBnaiXOTLUQT95_O1ZMaret9iKsi6e7uMwUNd6lfgznPGrzXKyXMMUds4Cax9UHeFY-7w7uAfQ63z-FfGsBYtW1KeztUaGBTFu8ZoRdnGs0yOgvGBbRl2bIzD9oVdvHo1RF_0xMt9E',
     },
