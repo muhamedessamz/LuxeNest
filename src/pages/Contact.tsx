@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
                 <div className="w-full max-w-[1200px] px-6 py-10">
 
                     {/* Page Heading */}
-                    <div className="flex flex-col items-center text-center gap-6 mb-12">
+                    <div className="flex flex-col items-center text-center gap-6 mb-12 py-6">
                         <div className="flex min-w-72 flex-col gap-3 items-center">
                             <h1 className="text-4xl md:text-5xl font-black leading-tight tracking-tight">Get in Touch</h1>
                             <p className="text-[#86775f] text-lg max-w-xl">
@@ -162,7 +162,7 @@ const Contact: React.FC = () => {
                     </div>
 
                     {/* Map Section */}
-                    <section className="flex flex-col gap-8 mb-20 animate-in fade-in slide-in-from-bottom-8 duration-700">
+                    <section className="flex flex-col gap-8 mb-20 mt-32 animate-in fade-in slide-in-from-bottom-8 duration-700">
                         <div className="flex flex-col gap-2">
                             <h2 className="text-3xl font-black">Find a Showroom</h2>
                             <p className="text-[#86775f] text-base">Visit our physical spaces to experience the artisan quality firsthand.</p>

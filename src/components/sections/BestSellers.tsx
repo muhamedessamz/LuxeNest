@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useCart } from '../../context/CartContext';
 import { useWishlist } from '../../context/WishlistContext';
 import { Heart } from 'lucide-react';
 
@@ -32,7 +31,6 @@ const products = [
 ];
 
 const BestSellers: React.FC = () => {
-    const { addToCart } = useCart();
     const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
 
     const handleWishlistToggle = (e: React.MouseEvent, product: any) => {
@@ -49,16 +47,6 @@ const BestSellers: React.FC = () => {
         }
     };
 
-    const handleAddToCart = (e: React.MouseEvent, product: any) => {
-        e.preventDefault();
-        addToCart({
-            id: product.id,
-            name: product.name,
-            price: product.price,
-            image: product.image,
-            quantity: 1
-        });
-    };
     return (
         <section className="bg-primary/5 py-20">
             <div className="max-w-[1500px] mx-auto px-6">
@@ -71,7 +59,7 @@ const BestSellers: React.FC = () => {
                     {products.map((product, index) => (
                         <Link
                             key={index}
-                            to="/product/velvet-serenity-sofa"
+                            to={`/product/${product.id}`}
                             className="bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-[#e1ddd5] group block"
                         >
                             <div className="rounded-lg overflow-hidden aspect-square mb-4 bg-[#f0eeea] relative">
@@ -90,10 +78,9 @@ const BestSellers: React.FC = () => {
                             <h4 className="font-bold text-lg mb-1 text-charcoal transition-colors duration-300">{product.name}</h4>
                             <p className="text-primary font-bold text-sm mb-3">${product.price}</p>
                             <button
-                                onClick={(e) => handleAddToCart(e, product)}
-                                className="w-full py-2 border border-primary text-primary rounded-lg font-bold text-sm hover:bg-primary hover:text-white transition-colors"
+                                className="w-full py-2 border border-primary bg-primary text-white rounded-lg font-bold text-sm hover:brightness-110 transition-colors"
                             >
-                                Add to Cart
+                                View Details
                             </button>
                         </Link>
                     ))}
