@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 const categories = [
     {
@@ -20,12 +22,18 @@ const categories = [
 
 const CategoriesGrid: React.FC = () => {
     return (
-        <section className="max-w-[1200px] mx-auto py-20 px-6">
+        <section className="max-w-[1500px] mx-auto py-20 px-6">
             <div className="flex flex-col items-center text-center mb-16 gap-3">
                 <span className="text-primary font-bold tracking-widest text-xs uppercase">Curated</span>
                 <h2 className="text-4xl md:text-5xl font-black mt-2 text-charcoal transition-colors duration-300">Featured Categories</h2>
                 <div className="h-1 w-20 bg-primary rounded-full mt-2"></div>
-                <a className="text-primary font-bold text-sm border-b-2 border-primary pb-1 mt-6 hover:brightness-110 transition-all" href="#">Browse All Collections</a>
+                <Link
+                    to="/collections"
+                    className="flex items-center gap-2 px-8 py-3 bg-primary text-white rounded-xl font-bold text-sm uppercase tracking-widest hover:brightness-110 hover:scale-105 active:scale-95 transition-all shadow-lg shadow-primary/20 mt-6"
+                >
+                    Browse All Collections
+                    <ArrowRight className="size-4" />
+                </Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {categories.map((cat, index) => (

@@ -62,7 +62,7 @@ const FeaturesAndServices: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <button className="mt-12 bg-primary text-white font-black uppercase tracking-widest py-5 px-12 rounded-xl hover:brightness-110 transition-all shadow-xl shadow-primary/20 hover:scale-105 active:scale-95">
+                        <button className="mt-12 bg-primary text-white font-bold md:font-black uppercase tracking-widest py-4 px-8 md:py-5 md:px-12 text-sm md:text-base rounded-xl hover:brightness-110 transition-all shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 w-full md:w-auto">
                             Book a Consultation
                         </button>
                     </div>

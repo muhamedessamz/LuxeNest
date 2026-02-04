@@ -1,12 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, Heart } from 'lucide-react';
 import { useWishlist } from '../context/WishlistContext';
 import { products } from '../data/products';
 
 const Collections: React.FC = () => {
     const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
-    const [currentPage, setCurrentPage] = React.useState(1);
+    const [searchParams, setSearchParams] = useSearchParams();
+    const currentPage = parseInt(searchParams.get('page') || '1', 10);
     const itemsPerPage = 6;
 
     const totalPages = Math.ceil(products.length / itemsPerPage);
@@ -14,7 +15,7 @@ const Collections: React.FC = () => {
     const currentProducts = products.slice(startIndex, startIndex + itemsPerPage);
 
     const handlePageChange = (page: number) => {
-        setCurrentPage(page);
+        setSearchParams({ page: page.toString() });
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
@@ -55,7 +56,7 @@ const Collections: React.FC = () => {
                                 to={`/product/${product.id}`}
                                 className="flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm border border-[#e1ddd5] group hover:shadow-xl transition-all duration-300"
                             >
-                                <div className="relative aspect-[4/5] overflow-hidden">
+                                <div className="relative aspect-square overflow-hidden">
                                     <img
                                         alt={product.name}
                                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
@@ -73,18 +74,18 @@ const Collections: React.FC = () => {
                                         <Heart className={`size-5 ${isInWishlist(product.id) ? 'fill-primary text-primary' : 'text-charcoal'}`} />
                                     </button>
                                 </div>
-                                <div className="p-6 flex flex-col gap-4 text-center items-center">
+                                <div className="p-4 flex flex-col gap-3 text-center items-center">
                                     <div className="flex flex-col gap-2 items-center w-full">
                                         <p className="text-[#86775f] text-xs font-bold uppercase tracking-widest">{product.category}</p>
                                         <h3 className="text-[#181511] text-xl font-black">{product.name}</h3>
                                         <div className="flex items-center gap-3 justify-center">
-                                            <p className="text-primary text-2xl font-bold leading-tight">${product.price}</p>
+                                            <p className="text-primary text-xl font-bold leading-tight">${product.price}</p>
                                             {// @ts-ignore
                                                 product.oldPrice && <p className="text-[#86775f] text-base line-through opacity-70">{product.oldPrice}</p>}
                                         </div>
                                     </div>
                                     <button
-                                        className="mt-2 w-full flex items-center justify-center gap-2 rounded-xl h-12 px-4 bg-primary text-white text-sm font-bold uppercase tracking-wider hover:brightness-110 transition-all shadow-sm hover:shadow-primary/20"
+                                        className="mt-1 w-full flex items-center justify-center gap-2 rounded-xl h-10 px-4 bg-primary text-white text-sm font-bold uppercase tracking-wider hover:brightness-110 transition-all shadow-sm hover:shadow-primary/20"
                                     >
                                         <span>View Details</span>
                                     </button>

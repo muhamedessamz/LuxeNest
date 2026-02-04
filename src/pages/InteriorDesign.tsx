@@ -71,9 +71,13 @@ const InteriorDesign: React.FC = () => {
                             <p className="text-white/90 text-xl leading-relaxed max-w-3xl text-center drop-shadow-md font-light">
                                 Experience the pinnacle of luxury with LuxeNest. Our expert designers craft sophisticated spaces tailored to your unique lifestyle, blending timeless elegance with contemporary functionality.
                             </p>
-                            <div className="flex gap-4 mt-4">
-                                <button className="bg-primary text-white px-10 py-5 rounded-xl font-black uppercase tracking-widest hover:brightness-110 hover:scale-[1.02] transition-all shadow-xl shadow-primary/30">Book a Consultation</button>
-                                <button className="border border-white/30 bg-white/5 text-white backdrop-blur-sm px-10 py-5 rounded-xl font-black uppercase tracking-widest hover:bg-white/10 transition-all">Our Portfolio</button>
+                            <div className="flex flex-col sm:flex-row gap-4 mt-6 w-full sm:w-auto px-4 md:px-0">
+                                <button className="bg-primary text-white px-8 py-4 md:px-10 md:py-5 rounded-xl font-bold md:font-black uppercase tracking-widest hover:brightness-110 hover:scale-[1.02] transition-all shadow-xl shadow-primary/30 text-sm md:text-base w-full sm:w-auto">
+                                    Book a Consultation
+                                </button>
+                                <button className="border border-white/30 bg-white/5 text-white backdrop-blur-sm px-8 py-4 md:px-10 md:py-5 rounded-xl font-bold md:font-black uppercase tracking-widest hover:bg-white/10 transition-all text-sm md:text-base w-full sm:w-auto">
+                                    Our Portfolio
+                                </button>
                             </div>
                         </div>
                     </div>

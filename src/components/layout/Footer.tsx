@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Globe, Share2, Mail } from 'lucide-react';
+import { Globe, Share2, Mail, Linkedin } from 'lucide-react';
 
 const Footer: React.FC = () => {
     return (
@@ -62,8 +62,43 @@ const Footer: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="max-w-[1200px] mx-auto px-6 border-t border-primary/10 pt-10 text-center md:text-left">
-                <p className="text-xs text-charcoal/40">© 2024 LuxeNest Interior Group. All rights reserved. Privacy Policy | Terms of Service</p>
+            <div className="max-w-[1200px] mx-auto px-6 border-t border-primary/10 pt-10 pb-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-8">
+                    {/* Left: Copyright */}
+                    <p className="text-xs text-charcoal/40 text-center md:text-left order-2 md:order-1">
+                        © 2026 LuxeNest Interior Group. All rights reserved.
+                    </p>
+
+                    {/* Middle: Developer Credits */}
+                    <div className="flex items-center justify-center gap-3 order-1 md:order-2">
+                        <span className="text-xs text-charcoal/40 font-medium">Developed by Mohamed Essam</span>
+                        <div className="flex gap-2">
+                            <a
+                                href="https://www.linkedin.com/in/mohamedessamz/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-charcoal/40 hover:text-primary transition-colors"
+                                title="LinkedIn"
+                            >
+                                <Linkedin className="size-4" />
+                            </a>
+                            <a
+                                href="mailto:mohamedessamzakariaa@gmail.com"
+                                className="text-charcoal/40 hover:text-primary transition-colors"
+                                title="Email"
+                            >
+                                <Mail className="size-4" />
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Right: Legal Links */}
+                    <div className="flex gap-4 justify-center md:justify-end order-3">
+                        <Link to="#" className="text-xs text-charcoal/40 hover:text-primary transition-colors whitespace-nowrap">Privacy Policy</Link>
+                        <span className="text-charcoal/20">|</span>
+                        <Link to="#" className="text-xs text-charcoal/40 hover:text-primary transition-colors whitespace-nowrap">Terms of Service</Link>
+                    </div>
+                </div>
             </div>
         </footer>
     );

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useWishlist } from '../../context/WishlistContext';
-import { Heart } from 'lucide-react';
+import { Heart, ArrowRight } from 'lucide-react';
 
 import { products } from '../../data/products';
 
@@ -37,30 +37,42 @@ const BestSellers: React.FC = () => {
                         <Link
                             key={index}
                             to={`/product/${product.id}`}
-                            className="bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-[#e1ddd5] group block"
+                            className="bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-[#e1ddd5] group flex flex-col items-center"
                         >
-                            <div className="rounded-lg overflow-hidden aspect-square mb-4 bg-[#f0eeea] relative">
+                            <div className="w-full rounded-lg overflow-hidden aspect-square mb-4 bg-[#f0eeea] relative">
                                 <img
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                     src={product.image}
                                     alt={product.name}
                                 />
                                 <button
                                     onClick={(e) => handleWishlistToggle(e, product)}
-                                    className={`absolute top-3 right-3 p-2 rounded-full shadow-md transition-all duration-300 ${isInWishlist(product.id) ? 'bg-primary text-white scale-110' : 'bg-white/80 text-charcoal opacity-0 group-hover:opacity-100'}`}
+                                    className={`absolute top-4 right-4 p-2.5 rounded-full shadow-md transition-all duration-300 z-10 ${isInWishlist(product.id) ? 'bg-primary text-white scale-110' : 'bg-white/90 text-charcoal opacity-0 group-hover:opacity-100 hover:bg-primary hover:text-white'}`}
                                 >
                                     <Heart className={`size-4 ${isInWishlist(product.id) ? 'fill-current' : ''}`} />
                                 </button>
                             </div>
-                            <h4 className="font-bold text-lg mb-1 text-charcoal transition-colors duration-300">{product.name}</h4>
-                            <p className="text-primary font-bold text-sm mb-3">${product.price}</p>
-                            <button
-                                className="w-full py-2 border border-primary bg-primary text-white rounded-lg font-bold text-sm hover:brightness-110 transition-colors"
-                            >
-                                View Details
-                            </button>
+                            <div className="flex flex-col items-center text-center w-full px-2">
+                                <h4 className="font-bold text-lg mb-1 text-charcoal group-hover:text-primary transition-colors duration-300">{product.name}</h4>
+                                <p className="text-primary font-bold text-base mb-4">${product.price}</p>
+                                <button
+                                    className="w-full py-2.5 bg-primary text-white rounded-xl font-bold text-xs uppercase tracking-wider hover:brightness-110 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300"
+                                >
+                                    View Details
+                                </button>
+                            </div>
                         </Link>
                     ))}
+                </div>
+
+                <div className="mt-16 flex justify-center">
+                    <Link
+                        to="/collections"
+                        className="flex items-center gap-2 px-10 py-4 bg-primary text-white rounded-xl font-bold text-sm uppercase tracking-widest hover:brightness-110 hover:scale-105 active:scale-95 transition-all shadow-xl shadow-primary/20"
+                    >
+                        View All Products
+                        <ArrowRight className="size-4" />
+                    </Link>
                 </div>
             </div>
         </section>
