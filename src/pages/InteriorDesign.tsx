@@ -132,31 +132,31 @@ const InteriorDesign: React.FC = () => {
                 {/* Booking Form Section - Light Luxe Theme */}
                 <section className="relative mb-24 rounded-[2rem] overflow-hidden flex items-center justify-center p-8 md:p-16 bg-[#f5f1ea] border border-[#e1ddd5]">
                     <div className="w-full max-w-7xl grid md:grid-cols-2 gap-16 items-center">
-                        <div className="flex flex-col gap-8">
-                            <div className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-8 items-center text-center md:items-start md:text-left">
+                            <div className="flex flex-col gap-4 items-center text-center md:items-start md:text-left">
                                 <h2 className="text-4xl md:text-5xl font-black text-[#181511] leading-tight">Ready to transform your home?</h2>
                                 <p className="text-[#86775f] text-lg leading-relaxed">
                                     Book a complimentary 30-minute discovery call with our principal designer to start your journey towards a more beautiful life.
                                 </p>
                             </div>
-                            <div className="space-y-5">
-                                <div className="flex items-center gap-4 group">
-                                    <div className="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary transition-all group-hover:bg-primary group-hover:text-white">
+                            <div className="space-y-5 w-fit mx-auto md:mx-0">
+                                <div className="flex items-center gap-4 group justify-start">
+                                    <div className="size-10 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary transition-all group-hover:bg-primary group-hover:text-white">
                                         <CheckCircle className="size-5" />
                                     </div>
-                                    <span className="font-bold text-[#181511]">A personalized aesthetic vision</span>
+                                    <span className="font-bold text-[#181511] text-left">A personalized aesthetic vision</span>
                                 </div>
-                                <div className="flex items-center gap-4 group">
-                                    <div className="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary transition-all group-hover:bg-primary group-hover:text-white">
+                                <div className="flex items-center gap-4 group justify-start">
+                                    <div className="size-10 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary transition-all group-hover:bg-primary group-hover:text-white">
                                         <CheckCircle className="size-5" />
                                     </div>
-                                    <span className="font-bold text-[#181511]">Expert space optimization plans</span>
+                                    <span className="font-bold text-[#181511] text-left">Expert space optimization plans</span>
                                 </div>
-                                <div className="flex items-center gap-4 group">
-                                    <div className="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary transition-all group-hover:bg-primary group-hover:text-white">
+                                <div className="flex items-center gap-4 group justify-start">
+                                    <div className="size-10 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary transition-all group-hover:bg-primary group-hover:text-white">
                                         <CheckCircle className="size-5" />
                                     </div>
-                                    <span className="font-bold text-[#181511]">Direct access to artisanal collections</span>
+                                    <span className="font-bold text-[#181511] text-left">Direct access to artisanal collections</span>
                                 </div>
                             </div>
                         </div>
